@@ -1,0 +1,23 @@
+{
+  "name": "creative",
+  "title": "FitMi",
+  "version": "1.0.0",
+  "homepage": "https://fitmi.club",
+  "author": "FitMi Team",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/FitMi/FitMi-landing/blob/master/LICENSE"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-header": "^1.8.7",
+    "gulp-less": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4",
+    "magnific-popup": "^1.1.0",
+    "scrollreveal": "^3.1.4",
+    "gulp-clean": "^0.3.2"
+  }
+}
