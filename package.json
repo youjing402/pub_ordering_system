@@ -1,9 +1,8 @@
 {
-  "name": "creative",
-  "title": "FitMi",
+  "name": "Pub",
+  "title": "Pub Ordering System",
   "version": "1.0.0",
-  "homepage": "https://fitmi.club",
-  "author": "FitMi Team",
+  "author": "UIP Team",
   "license": {
     "type": "MIT",
     "url": "https://github.com/FitMi/FitMi-landing/blob/master/LICENSE"
@@ -13,6 +12,7 @@
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.10",
     "gulp-header": "^1.8.7",
+    "gulp-sass": "^3.1.0",
     "gulp-less": "^3.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.4",

@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
+var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
@@ -28,9 +29,22 @@ gulp.task('less', function() {
         }))
 });
 
+// Compile SASS files from /less into /css
+gulp.task('sass', function() {
+    var input = 'sass/index.scss';
+    var output = 'css';
+    return gulp.src(input)
+        .pipe(sass())
+        .pipe(header(banner, { pkg: pkg }))
+        .pipe(gulp.dest(output))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+
 // Minify compiled CSS
-gulp.task('minify-css', ['less'], function() {
-    return gulp.src('css/creative.css')
+gulp.task('minify-css', ['sass'], function() {
+    return gulp.src('css/index.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('css'))
@@ -71,14 +85,14 @@ gulp.task('copy', function() {
 })
 
 // Run everything
-gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', ['sass', 'minify-css', 'minify-js', 'copy']);
 
 gulp.task('clean', function () {
     return gulp.src('build', {read: false})
         .pipe(clean());
 });
 
-gulp.task('build', ['less', 'minify-css', 'minify-js', 'copy', 'clean'], function() {
+gulp.task('build', ['sass', 'minify-css', 'minify-js', 'copy', 'clean'], function() {
     gulp.src(['vendor/**/*'])
         .pipe(gulp.dest('build/vendor'));
     
@@ -105,8 +119,8 @@ gulp.task('browserSync', function() {
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
-    gulp.watch('less/*.less', ['less']);
+gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() {
+    gulp.watch('sass/*.scss', ['sass']);
     gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
