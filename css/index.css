@@ -5848,11 +5848,26 @@ h1 {
   justify-content: flex-start; }
 
 .item-card {
-  margin: 15px;
-  border: 5px; }
+  padding-top: 0px;
+  position: relative;
+  margin: 15px 25px 15px 25px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: #ccc; }
   .item-card img {
     width: 180px;
-    height: 180px; }
+    height: 180px;
+    border-radius: 10px; }
+
+.card-cap {
+  padding: 5px;
+  border-radius: 0px 0px 10px 10px;
+  background-color: rgba(231, 231, 231, 0.5);
+  color: #555;
+  position: absolute;
+  bottom: 0px;
+  width: 100%; }
 
 .brand-bar {
   padding-top: 20px;
