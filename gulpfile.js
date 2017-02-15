@@ -107,6 +107,9 @@ gulp.task('build', ['sass', 'minify-css', 'minify-js', 'copy', 'clean'], functio
 
     gulp.src(['*.html'])
         .pipe(gulp.dest('build'));
+
+    gulp.src(['fonts/**'])
+        .pipe(gulp.dest('build/fonts'));
 });
 
 // Configure the browserSync task
