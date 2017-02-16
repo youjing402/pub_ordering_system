@@ -5822,6 +5822,9 @@ button.close {
 h1 {
   color: green; }
 
+.hidden {
+  display: none; }
+
 .search-bar {
   width: 80%;
   margin-left: auto;
@@ -5878,3 +5881,34 @@ h1 {
 
 .fa-large {
   font-size: 15pt; }
+
+.detailed-img-wrapper img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px; }
+
+#about .navbar {
+  margin: 0;
+  padding-bottom: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: #152441;
+  color: white; }
+
+#about .navbar-brand {
+  color: white; }
+  #about .navbar-brand > li > a {
+    color: white; }
+
+#about .navbar-nav > .active > a {
+  color: white;
+  background-color: #aaa; }
+
+#about .navbar-nav > li > a {
+  color: white; }
+
+#about .bg-img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover; }

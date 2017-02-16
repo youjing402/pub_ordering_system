@@ -1,7 +1,13 @@
 @import 'vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 
+$theme-nav-color: #152441;
+
 h1 {
 	color: green;
+}
+
+.hidden {
+	display: none;
 }
 
 .search-bar {
@@ -71,4 +77,50 @@ h1 {
 
 .fa-large {
 	font-size: 15pt;
+}
+
+.detailed-img-wrapper {
+	img {
+		width: 100%;
+		height: 500px;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+}
+
+#about {
+	.navbar {
+		margin: 0;
+		padding-bottom: 0;
+		border: 0;
+		border-radius: 0;
+		background-color: $theme-nav-color;
+		color: white;
+	}
+
+	.navbar-brand {
+		color: white;
+
+		>li>a {
+			color: white;
+		}
+	}
+
+	.navbar-nav {
+
+		&>.active>a {
+			color: white;
+			background-color: #aaa;
+		}
+
+		&>li>a {
+			color: white;
+		}
+	}
+
+	.bg-img {
+		height: 100vh;
+		width: 100vw;
+		object-fit: cover;
+	}
 }
