@@ -17,7 +17,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
 	font-family: $lato;
 }
 
@@ -25,14 +26,23 @@ h6 {
 	display: none;
 }
 
+a {
+	color: white;
+}
+
+.search-control {
+	background-color: #ddd;
+}
+
 .navbar {
 	margin: 0;
 	padding-bottom: 0;
 	border-color: white;
-	border-width: 0.5px;
+	border-width: 0;
 	border-radius: 0;
-	background-color: $theme-nav-color;
+	background-color: black;
 	color: white;
+	opacity: 0.8;
 }
 
 .navbar-brand {
@@ -57,6 +67,8 @@ h6 {
 
 
 #menu {
+
+	background-color: #525759;
 
 	.search-bar {
 		width: 80%;
@@ -88,20 +100,21 @@ h6 {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
+		max-width: 800px;
+		margin-top: 30px;
 	}
 
 	.item-card {
 		padding-top: 0px;
 		position: relative;
 		img {
-			width: 180px;
-			height: 180px;
-			border-radius: 10px;
+			width: 200px;
+			height: 200px;
 		}
 		margin: 15px 25px 15px 25px;
 		border-style: solid;
 		border-width: 1px;
-		border-radius: 10px;
+		border-radius: 0px;
 		border-color: #ccc;
 	}
 
@@ -122,24 +135,86 @@ h6 {
 
 	.sub-title {
 		margin-bottom: 20px;
+		color: white;
 	}
 
 	.fa-large {
 		font-size: 15pt;
 	}
 
+	.item-detailed {
+		margin-top: 40px;
+		color: white;
+	}
+
+	.detailed-card {
+		width: 80%;
+		height: 500px;
+		background-color: #000;
+		box-shadow: 10px 10px 5px #333;
+		position: relative;
+
+		.close-btn {
+			position: absolute;
+			right: -10px;
+			top: -10px;
+			height: 30px;
+			width: 30px;
+			border-radius: 15px;
+			background-color: red;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			b {
+
+			}
+		}
+
+		.drink-name {
+
+		}
+
+		.drink-price {
+			color: $theme-sec-color;
+			margin-bottom: 40px;
+		}
+
+		.drink-description {
+			color: #ccc;
+		}
+
+		.add-cart-btn {
+			border-radius: 0;
+			border-color: $theme-sec-color;
+			background-color: transparent;
+			color: $theme-sec-color;
+
+			i {
+				margin-right: 10px;
+				font-size: 18px;
+			}
+		}
+	}
+
 	.detailed-img-wrapper {
+		padding: 0;
+
 		img {
 			width: 100%;
 			height: 500px;
 			object-fit: cover;
-			border-radius: 10px;
 		}
+	}
+
+	.detailed-info-wrapper {
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-top: 40px;
 	}
 }
 
 #about {
-	
 
 	.bg-img {
 		height: 100vh;
