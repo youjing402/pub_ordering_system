@@ -10,6 +10,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url("https://fonts.googleapis.com/css?family=Lobster|Pacifico|Lato");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5819,38 +5821,65 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-h1 {
-  color: green; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif; }
 
 .hidden {
   display: none; }
 
-.search-bar {
+.navbar {
+  margin: 0;
+  padding-bottom: 0;
+  border-color: white;
+  border-width: 0.5px;
+  border-radius: 0;
+  background-color: #152441;
+  color: white; }
+
+.navbar-brand {
+  color: white; }
+  .navbar-brand > li > a {
+    color: white; }
+
+.navbar-default .navbar-nav > .active > a {
+  color: white;
+  background-color: #aaa; }
+
+.navbar-default .navbar-nav > li > a {
+  color: white; }
+
+#menu .search-bar {
   width: 80%;
   margin-left: auto;
   margin-right: auto; }
-  .search-bar .wrapper {
+  #menu .search-bar .wrapper {
     position: relative; }
 
-.float-right {
+#menu .float-right {
   position: absolute;
   right: 5px;
   top: 10px; }
 
-.category-bar {
+#menu .category-bar {
   display: flex;
   justify-content: space-around;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  margin-top: 30px; }
 
-.item-collection {
+#menu .item-collection {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; }
 
-.item-card {
+#menu .item-card {
   padding-top: 0px;
   position: relative;
   margin: 15px 25px 15px 25px;
@@ -5858,12 +5887,12 @@ h1 {
   border-width: 1px;
   border-radius: 10px;
   border-color: #ccc; }
-  .item-card img {
+  #menu .item-card img {
     width: 180px;
     height: 180px;
     border-radius: 10px; }
 
-.card-cap {
+#menu .card-cap {
   padding: 5px;
   border-radius: 0px 0px 10px 10px;
   background-color: rgba(231, 231, 231, 0.5);
@@ -5872,43 +5901,54 @@ h1 {
   bottom: 0px;
   width: 100%; }
 
-.brand-bar {
+#menu .brand-bar {
   padding-top: 20px;
   padding-left: 20px; }
 
-.sub-title {
+#menu .sub-title {
   margin-bottom: 20px; }
 
-.fa-large {
+#menu .fa-large {
   font-size: 15pt; }
 
-.detailed-img-wrapper img {
+#menu .detailed-img-wrapper img {
   width: 100%;
   height: 500px;
   object-fit: cover;
   border-radius: 10px; }
 
-#about .navbar {
-  margin: 0;
-  padding-bottom: 0;
-  border: 0;
-  border-radius: 0;
-  background-color: #152441;
-  color: white; }
-
-#about .navbar-brand {
-  color: white; }
-  #about .navbar-brand > li > a {
-    color: white; }
-
-#about .navbar-nav > .active > a {
-  color: white;
-  background-color: #aaa; }
-
-#about .navbar-nav > li > a {
-  color: white; }
-
 #about .bg-img {
   height: 100vh;
   width: 100vw;
   object-fit: cover; }
+
+#about .bg-wrapper {
+  position: relative; }
+
+#about .float-intro {
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  width: 45%; }
+  #about .float-intro .title {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: "Pacifico", cursive;
+    color: white;
+    border-color: black; }
+  #about .float-intro p {
+    width: 70%;
+    margin-left: 10px;
+    font-family: "Lato", sans-serif;
+    color: #bbb; }
+  #about .float-intro .btn {
+    background-color: #ffd446;
+    color: white;
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    border-radius: 0;
+    border: 0;
+    margin-top: 40px;
+    margin-left: 10px;
+    padding-left: 20px;
+    padding-right: 20px; }
