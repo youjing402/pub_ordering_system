@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Ghost ship </title>
+		<meta charset="utf-8">
+		<link href="jquery-ui.min.css" rel="stylesheet">
+		<link href="Projektet.css" rel="stylesheet">
+		<script src="jquery.min.js"></script>
+		<script src="jquery-ui.min.js"></script>
+		
+		
+<script>
+$(document).ready(function() {
+$('#JSON-text').draggable({
+	appendTo : "body",
+	//inget funkade utan clone...
+	helper : "clone",
+	revert : "invalid"
+});
+
+$('.dragBox').draggable({
+	revert : "invalid",
+	helper : "clone"
+});
+
+$('#carlsbergBeer').draggable({
+	revert : "invalid",
+	helper : "clone"
+});
+
+$('.testBox').droppable({
+/*	drop : function(event, ui){
+		alert('added');
+		$(this).html(ui.draggable.text());
+	} */
+	drop: function(event, ui){
+	var text = $(ui.draggable.attr("alt"))
+	var old = $(this).html();
+	
+	if(old == ""){
+		$(this).html(ui.draggable.attr("text") + "<br>");
+	
+	}else{
+	
+		$(this).html(old + ui.draggable.attr("text") + "<br>");
+	}
+	
+	console.log(ui.draggable.attr("text"));
+/*	$(this).text(ui.draggable.attr("text")); */
+	ui.helper.hide('explode');
+	}
+});
+
+$('.Items').droppable({
+	drop: function(event, ui){
+		$(this).text(ui.draggable.text());
+	}
+})
+
+
+$('#BeerBtn').click(function(){$('#BeerBtn').animate({
+						'width':50,'height': 50})
+						$.get('http://pub.jamaica-inn.net/fpdb/api.php?username=jorass&password=jorass&action=iou_get', handleInfoFromPost);
+						}); 
+						
+function handleInfoFromPost(data){
+	console.log(data);
+	console.log(data.payload[0]);
+	$('#JSON-text').html(data.payload[0].first_name);
+	
+	
+}
+
+
+}); // end ready
+</script>
+	</head>
+	
+	<body>
+	<div class="dragBox" alt="upptagen"></div>
+	<img src="images/carlsberg.jpg" height="50px" width="70px" id="carlsbergBeer" alt="Carlsberg" text="Carlsberg  Beer 33cl,  Price: 30kr"> 
+	
+		<div class="topDiv">
+		
+			<div #type class="typeBtn">
+				<input type="submit" value="Beer" name="knapp" id="BeerBtn"/><br><br>
+				<input type="submit" value="Wine" name="knapp" id="WineBtn"/><br><br>
+				<input type="submit" value="Snack" name="knapp" id="SnackBtn"/>
+			</div>
+			
+			<div #brand-menu></div>
+			<div #Item></div>
+		
+		
+		</div>
+		
+		<p id="JSON-text">Text</p>
+		
+		
+		<!--<div #Orders></div>
+		<textarea rows="5" cols="50" placeholder="Här kommer texten att synas!" class="Items"></textarea>
+		<br>
+		<img src="images/trashcan-empty-icon.png" id="trashcan"> -->
+		
+		<div class="testBox"></div>
+		
+	
+	</body>
+	<!-- <script type="text/javascript" src="Projektet.js"></script> -->
+	 <!-- <script type="text/javascript" src="konstigt.js"></script> -->
+	
+</html>

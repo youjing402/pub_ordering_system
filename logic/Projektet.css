@@ -1,0 +1,36 @@
+html{
+	
+}
+
+.topDiv{
+	
+	width: 70%;
+	margin: auto;
+	
+	
+}
+
+.typeBtn{
+	margin-top: 70px;
+	
+}
+
+.dragBox{
+	width:30px;
+	height:30px;
+	background: black;
+}
+
+.testBox{
+	
+	width: 300px;
+	height: 70px;
+	border: 2px solid black;
+	/*background: yellow;*/
+
+}
+
+.testBox.highlight{
+	background:green;
+	
+}
