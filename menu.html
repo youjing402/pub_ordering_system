@@ -4,45 +4,19 @@
 <head>
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/index.min.css" rel="stylesheet">
+	<link href="css/loginstyle.css"rel="stylesheet">
 	
 	<link href="vendor/bootstrap-sass/assets/stylesheets/_bootstrap." rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 	<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
-	<script src="js/creative.js"></script>
+	<script src="js/menu.js"></script>
 </head>
 
 <body id="menu">
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">The Flying Dutchman</a>
-			</div>
+	<div id="navBar">
+	</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li><a href="index.html">About <span class="sr-only">(current)</span></a></li>
-					<li class="active"><a href="menu.html">Menu</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Login</a></li>
-					<li><a><i class="fa fa-shopping-cart fa-large" aria-hidden="true"></i></a></li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
-	</nav>
-
-	<div class="category-bar">
-		<span><a>Beer</a></span>
-		<span><a>Wine</a></span>
-		<span><a>Whiskey</a></span>
+	<div id="modalLogin" class="modal">	
 	</div>
 
 	<div class="search-bar">
@@ -54,13 +28,25 @@
 
 	<div>
 		<div class="row">
-			<div class="col-sm-2 side-bar">
-				<div class="brand-bar">
-					<p class="sub-title"><b>Brands</b></p>
-					<p><a>Brand1</a></p>
-					<p><a>Brand2</a></p>
-					<p><a>Brand3</a></p>
+
+			<div class="col-sm-1 category-bar">
+				<div class="side-bar">
+					<p><a>Beer</a></p>
+					<p><a>Wine</a></p>
+					<p><a>Whiskey</a></p>
 				</div>
+			</div>
+
+			<div class="col-sm-1">
+				<div class="side-bar">
+					<div class="brand-bar">
+						<p class="sub-title"><b>Brands</b></p>
+						<p><a>Brand1</a></p>
+						<p><a>Brand2</a></p>
+						<p><a>Brand3</a></p>
+					</div>
+				</div>
+
 			</div>
 			<div class="col-sm-10 item-collection" id="item-collection">
 				<div class="item-card">
