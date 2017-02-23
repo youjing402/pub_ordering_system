@@ -1,44 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-		<head>
-				<title>The Flying Dutchman</title>
-				<meta charset="utf-8"/>
-				<link rel="stylesheet" type="text/css" href="css/loginstyle.css">
-		</head>
-		<body>
-
 <!--TODO: Move javascript into own file
 Also change design so it's not copied
 ensure login works as in is username and password verified-->
 
-<button id="loginbtn">Login</button>
+<form class="modal-login animate" id="loginform" onsubmit="return validateForm()" action="http://pub.jamaica-inn.net/fpdb/api.php?username=username&password=password&action=action" method="GET">
+  <div class="imgcontainer">
+    <h3>The Flying Dutchman</h3>
+    <span id="closex" class="close" title="Close Modal">&times;</span>
+  </div>
 
-<div id="modalLogin" class="modal">
-  
-  <form class="modal-login animate" id="loginform" onsubmit="return validateForm()" action="http://pub.jamaica-inn.net/fpdb/api.php?username=username&password=password&action=action" method="GET">
-    <div class="imgcontainer">
-	  <h3>The Flying Dutchman</h3>
-      <span id="closex" class="close" title="Close Modal">&times;</span>
-    </div>
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" id="username" placeholder="Enter Username" name="username" required>
 
-    <div class="container">
-      <label><b>Username</b></label>
-      <input type="text" id="username" placeholder="Enter Username" name="username" required>
+    <label><b>Password</b></label>
+    <input type="password" id="password" placeholder="Enter Password" name="password" required>
 
-      <label><b>Password</b></label>
-      <input type="password" id="password" placeholder="Enter Password" name="password" required>
-      
-      <input type="hidden" id="action" value="iou_get" name="action" hidden>
-      
-      <button type="submit">Login</button>
-      </div>
+    <input type="hidden" id="action" value="iou_get" name="action" hidden>
 
-    <div class="container" id="cancelsection">
-      <button type="button" class="cancelbtn" id="cancelbtn">Cancel</button>
-      <span class="forgotpassword">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
+    <button type="submit">Login</button>
+  </div>
+
+  <div class="container" id="cancelsection">
+    <button type="button" class="cancelbtn" id="cancelbtn">Cancel</button>
+    <span class="forgotpassword">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
 <script src="js/loginscript.js"></script>
-</body>
-</html>

@@ -1,4 +1,3 @@
-
 // Get the element
 var modal = document.getElementById('modalLogin');
 var loginbtn = document.getElementById('loginbtn');
@@ -7,6 +6,7 @@ var cancelbtn = document.getElementById('cancelbtn');
 var loginform = document.getElementById('loginform');
 var username = document.getElementById('username');
 var password = document.getElementById('password');
+
 
 //Open the modal on click of login button
 loginbtn.onclick = function(event) {
