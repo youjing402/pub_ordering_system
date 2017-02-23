@@ -10,5 +10,5 @@ $(document).ready(function() {
 	});
 
 	$('#modalLogin').load("./modal_login.html");
-
+	$('#navBar').load("./navbar.html");
 });
