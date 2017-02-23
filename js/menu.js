@@ -9,6 +9,6 @@ $(document).ready(function() {
 		$('#item-detailed').addClass("hidden");
 	});
 
-	$('#modalLogin').load("./modal_login.html");
 	$('#navBar').load("./navbar.html");
+	$('#modalLogin').load("./modal_login.html");
 });
