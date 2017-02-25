@@ -5830,6 +5830,10 @@ h6,
 p {
   font-family: "Lato", sans-serif; }
 
+.row {
+  margin-left: 0px;
+  margin-right: 0px; }
+
 .hidden {
   display: none; }
 
@@ -5893,8 +5897,8 @@ a {
     border-radius: 0px;
     border-color: #ccc; }
     #menu .item-card img {
-      width: 200px;
-      height: 200px; }
+      width: 180px;
+      height: 180px; }
   #menu .card-cap {
     padding: 5px;
     border-radius: 0px 0px 10px 10px;

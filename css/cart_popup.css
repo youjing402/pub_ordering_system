@@ -1,0 +1,54 @@
+/*!
+ * Start Bootstrap - Pub Ordering System()
+ * Copyright 2016 - UIP Team
+ * Licensed under MIT (https://github.com/FitMi/FitMi-landing/blob/master/LICENSE)
+ */
+#cartPopup {
+  margin-top: 40px;
+  padding-top: 20px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5); }
+  #cartPopup .title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; }
+  #cartPopup .cart-item {
+    margin-bottom: 20px; }
+    #cartPopup .cart-item img {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      filter: brightness(40%); }
+  #cartPopup .square {
+    position: relative;
+    width: 80%;
+    max-width: 120px;
+    margin-left: auto;
+    margin-right: auto; }
+  #cartPopup .square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%; }
+  #cartPopup .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+    #cartPopup .content h4 {
+      margin-bottom: 0px;
+      margin-top: 15%; }
+    #cartPopup .content h5 {
+      margin-top: 0px; }
+    #cartPopup .content .amount {
+      font-size: 20px; }
+      #cartPopup .content .amount i {
+        color: black;
+        background-color: white;
+        padding-left: 2.5px;
+        padding-right: 2.5px;
+        border-radius: 0.5em;
+        margin-left: 10px;
+        margin-right: 10px; }
+  #cartPopup .btn-grp {
+    display: flex; }

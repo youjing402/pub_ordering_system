@@ -31,7 +31,7 @@ gulp.task('less', function() {
 
 // Compile SASS files from /less into /css
 gulp.task('sass', function() {
-    var input = 'sass/index.scss';
+    var input = 'sass/*.scss';
     var output = 'css';
     return gulp.src(input)
         .pipe(sass())

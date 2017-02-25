@@ -22,6 +22,11 @@ p {
 	font-family: $lato;
 }
 
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
 .hidden {
 	display: none;
 }
@@ -107,8 +112,8 @@ a {
 		padding-top: 0px;
 		position: relative;
 		img {
-			width: 200px;
-			height: 200px;
+			width: 180px;
+			height: 180px;
 		}
 		margin: 15px 25px 15px 25px;
 		border-style: solid;
