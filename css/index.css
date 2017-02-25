@@ -5867,6 +5867,8 @@ a {
 
 #menu {
   background-color: #525759; }
+  #menu .row-wrapper {
+    display: flex; }
   #menu .search-bar {
     width: 80%;
     margin-left: auto;
@@ -5887,11 +5889,12 @@ a {
     flex-wrap: wrap;
     justify-content: flex-start;
     max-width: 800px;
-    margin-top: 30px; }
+    margin-top: 30px;
+    margin-left: 40px; }
   #menu .item-card {
     padding-top: 0px;
     position: relative;
-    margin: 15px 25px 15px 25px;
+    margin: 15px 15px 15px 15px;
     border-style: solid;
     border-width: 1px;
     border-radius: 0px;
@@ -5907,6 +5910,9 @@ a {
     position: absolute;
     bottom: 0px;
     width: 100%; }
+  #menu .bar-wrapper {
+    display: flex;
+    max-width: 20%; }
   #menu .brand-bar {
     padding-top: 20px;
     padding-left: 20px; }
@@ -5958,6 +5964,26 @@ a {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 40px; }
+  #menu .category-tab {
+    position: relative;
+    margin-bottom: 10px; }
+    #menu .category-tab .rectangle {
+      width: 7em;
+      height: 40px;
+      background-color: green;
+      display: flex;
+      align-items: center;
+      padding-left: 1em; }
+      #menu .category-tab .rectangle a {
+        font-size: 22px; }
+  #menu .category-tab-bg {
+    display: flex; }
+  #menu .arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid green; }
 
 #about .bg-img {
   height: 100vh;

@@ -75,6 +75,10 @@ a {
 
 	background-color: #525759;
 
+	.row-wrapper {
+		display: flex;
+	}
+
 	.search-bar {
 		width: 80%;
 		margin-left: auto;
@@ -106,6 +110,7 @@ a {
 		justify-content: flex-start;
 		max-width: 800px;
 		margin-top: 30px;
+		margin-left: 40px;
 	}
 
 	.item-card {
@@ -115,7 +120,7 @@ a {
 			width: 180px;
 			height: 180px;
 		}
-		margin: 15px 25px 15px 25px;
+		margin: 15px 15px 15px 15px;
 		border-style: solid;
 		border-width: 1px;
 		border-radius: 0px;
@@ -130,6 +135,11 @@ a {
 		position: absolute;
 		bottom: 0px;
 		width: 100%;
+	}
+
+	.bar-wrapper {
+		display: flex;
+		max-width: 20%;
 	}
 
 	.brand-bar {
@@ -215,6 +225,38 @@ a {
 		padding-left: 40px;
 		padding-right: 40px;
 		padding-top: 40px;
+	}
+
+	.category-tab {
+		position: relative;
+		margin-bottom: 10px;
+
+		.rectangle {
+			width: 7em;
+			height: 40px;
+			background-color: green;
+			display: flex;
+			align-items: center;
+			padding-left: 1em;
+
+			a {
+				font-size: 22px;
+			}
+		}
+	}
+
+	.category-tab-bg {
+		display: flex;
+	}
+
+
+
+	.arrow-right {
+		width: 0; 
+		height: 0; 
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		border-left: 20px solid green;
 	}
 }
 
