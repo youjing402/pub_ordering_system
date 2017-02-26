@@ -4,6 +4,8 @@
 
 $theme-nav-color: #152441;
 $theme-sec-color: #ffd446;
+$tab-color: #2f2421;
+$tab-selected-color: #ffd446;
 
 $roboto-slab: 'Roboto Slab', serif;   
 $open-sans: 'Open Sans', sans-serif;
@@ -73,10 +75,12 @@ a {
 
 #menu {
 
-	background-color: #525759;
+	background-color: #4f4844;
 
 	.row-wrapper {
 		display: flex;
+		justify-content: space-between;
+		max-width: 82%;
 	}
 
 	.search-bar {
@@ -100,17 +104,68 @@ a {
 	}
 
 	.category-bar {
-		padding-top: 20px;
-		padding-left: 20px;
+		padding-top: 30px;
+	}
+
+	.category-tab {
+		position: relative;
+		margin-bottom: 35px;
+
+		.rectangle {
+			width: 10em;
+			height: 50px;
+			background-color: $tab-color;
+			display: flex;
+			align-items: center;
+			padding-left: 1em;
+
+			a {
+				font-size: 26px;
+			}
+		}
+	}
+
+	.category-tab.selected {
+		.rectangle {
+			background-color: $tab-selected-color;
+			color: black;
+		}
+		.arrow-right {
+			border-left: 25px solid $tab-selected-color;
+		}
+	}
+
+	.category-tab-bg {
+		display: flex;
+	}
+
+	.first-cate-band {
+
+	}
+
+	.second-cate-band {
+		margin-top: 80px;
+	}
+
+	.third-cate-band {
+		margin-top: 165px;
+	}
+
+	.arrow-right {
+		width: 0; 
+		height: 0; 
+		border-top: 25px solid transparent;
+		border-bottom: 25px solid transparent;
+		border-left: 25px solid $tab-color;
 	}
 
 	.item-collection {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
-		max-width: 800px;
+		max-width: 700px;
 		margin-top: 30px;
-		margin-left: 40px;
+		margin-left: 30px;
 	}
 
 	.item-card {
@@ -119,12 +174,15 @@ a {
 		img {
 			width: 180px;
 			height: 180px;
+			object-fit: cover;
+			border-radius: 0px 0px 10px 10px;
 		}
 		margin: 15px 15px 15px 15px;
-		border-style: solid;
-		border-width: 1px;
-		border-radius: 0px;
-		border-color: #ccc;
+		border-radius: 0px 0px 10px 10px;
+		//border-style: solid;
+		//border-width: 1px;
+		//border-radius: 0px;
+		//border-color: #ccc;
 	}
 
 	.card-cap {
@@ -139,7 +197,6 @@ a {
 
 	.bar-wrapper {
 		display: flex;
-		max-width: 20%;
 	}
 
 	.brand-bar {
@@ -227,37 +284,11 @@ a {
 		padding-top: 40px;
 	}
 
-	.category-tab {
-		position: relative;
-		margin-bottom: 10px;
-
-		.rectangle {
-			width: 7em;
-			height: 40px;
-			background-color: green;
-			display: flex;
-			align-items: center;
-			padding-left: 1em;
-
-			a {
-				font-size: 22px;
-			}
-		}
+	.cart-popup {
+		position: absolute;
+		right: 0px;
 	}
 
-	.category-tab-bg {
-		display: flex;
-	}
-
-
-
-	.arrow-right {
-		width: 0; 
-		height: 0; 
-		border-top: 20px solid transparent;
-		border-bottom: 20px solid transparent;
-		border-left: 20px solid green;
-	}
 }
 
 #about {
