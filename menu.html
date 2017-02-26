@@ -16,7 +16,54 @@
 	<div id="navBar">
 	</div>
 
+<<<<<<< Updated upstream
 	<div id="modalLogin" class="modal">	
+=======
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">About <span class="sr-only">(current)</span></a></li>
+					<li class="active"><a href="menu.html">Menu</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><button id="loginbtn">Login</button></li>
+					<li><a><i class="fa fa-shopping-cart fa-large" aria-hidden="true"></i></a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	
+	<!-- Modal login opens up when Login button is clicked -->
+	<div id="modalLogin" class="modal">
+  
+  		<form class="modal-login animate" id="loginform" onsubmit="return validateForm()" action="http://pub.jamaica-inn.net/fpdb/api.php?username=username&password=password&action=action" method="GET">
+    		<div class="imgcontainer">
+	  			<h3>The Flying Dutchman</h3>
+		      	<span id="closex" class="close" title="Close Modal">&times;</span>
+    		</div>
+
+		    <div class="container">
+      			<label><b>Username</b></label>
+      			<br/>
+		        <input type="text" id="username" placeholder="Enter Username" name="username" required>
+      			<br/>
+
+      			<label><b>Password</b></label>
+      			<br/>
+      			<input type="password" id="password" placeholder="Enter Password" name="password" required>
+      			<br/>
+      
+     			<input type="hidden" id="action" value="iou_get" name="action" hidden>
+      
+      			<button type="submit">Login</button>
+      		</div>
+
+    		<div class="container" id="cancelsection">
+     			<button type="button" class="cancelbtn" id="cancelbtn">Cancel</button>
+      			<span class="forgotpassword">Forgot <a href="#">password?</a></span>
+    		</div>
+  		</form>
+>>>>>>> Stashed changes
 	</div>
 
 	<div class="search-bar">
@@ -95,7 +142,11 @@
 			</div>
 		</div>
 	</div>
+<<<<<<< Updated upstream
 
 	
+=======
+	<script src="js/loginscript.js"></script>
+>>>>>>> Stashed changes
 </body>
 </html>
