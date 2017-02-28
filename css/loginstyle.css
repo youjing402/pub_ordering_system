@@ -1,9 +1,9 @@
 /* Full-width input fields */
 input[type=text], input[type=password] {
-    width: 47%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: block;
+    display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
@@ -13,10 +13,10 @@ button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
-    margin: auto;
+    margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 47%;
+    width: 100%;
 }
 
 #loginbtn {
@@ -29,7 +29,6 @@ button {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
-    float: left;
 }
 
 /* Center the image and position the close button */
@@ -45,8 +44,7 @@ button {
 }
 
 #cancelsection {
-	background-color: #bab8b8;
-	width: 100%;
+	background-color: #f1f1f1;
 }
 
 span.forgotpassword {
@@ -64,14 +62,14 @@ span.forgotpassword {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: #fff /* Fallback color */
+    background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     padding-top: 60px;
 }
 
 /* Modal Login Box */
 .modal-login {
-    background-color: #fff;
+    background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 40%; 
