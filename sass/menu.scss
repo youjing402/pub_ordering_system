@@ -1,76 +1,6 @@
 @import 'vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
-@import url('https://fonts.googleapis.com/css?family=Lobster|Pacifico|Lato');
-
-$theme-nav-color: #152441;
-$theme-sec-color: #ffd446;
-$tab-color: #2f2421;
-$tab-selected-color: #ffd446;
-
-$roboto-slab: 'Roboto Slab', serif;   
-$open-sans: 'Open Sans', sans-serif;
-$lobster: 'Lobster', cursive;
-$pacifico: 'Pacifico', cursive;
-$lato: 'Lato', sans-serif;
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	font-family: $lato;
-}
-
-.row {
-	margin-left: 0px;
-	margin-right: 0px;
-}
-
-.hidden {
-	display: none;
-}
-
-a {
-	color: white;
-}
-
-.search-control {
-	background-color: #ddd;
-}
-
-.navbar {
-	margin: 0;
-	padding-bottom: 0;
-	border-color: white;
-	border-width: 0;
-	border-radius: 0;
-	background-color: black;
-	color: white;
-	opacity: 0.8;
-}
-
-.navbar-brand {
-	color: white;
-
-	>li>a {
-		color: white;
-	}
-}
-
-.navbar-default .navbar-nav {
-
-	&>.active>a {
-		color: white;
-		background-color: #aaa;
-	}
-
-	&>li>a {
-		color: white;
-	}
-}
+@import 'sass/variables.scss';
+@import 'sass/common.scss';
 
 
 #menu {
@@ -291,53 +221,6 @@ a {
 
 }
 
-#about {
 
-	.bg-img {
-		height: 100vh;
-		width: 100vw;
-		object-fit: cover;
-	}
-
-	.bg-wrapper {
-		position: relative;
-	}
-
-	.float-intro {
-		position: absolute;
-		top: 120px;
-		right: 20px;
-		width: 45%;
-
-		.title {
-			font-size: 50px;
-			margin-bottom: 20px;
-			font-family: $pacifico;
-			color: white;
-			border-color: black;
-		}
-
-		p {
-			width: 70%;
-			margin-left: 10px;
-			font-family: $lato;
-			color: #bbb;
-		}
-
-		.btn {
-			background-color: $theme-sec-color;
-			color: white;
-			font-size: 20px;
-			font-family: $lato;
-			border-radius: 0;
-			border: 0;
-			margin-top: 40px;
-			margin-left: 10px;
-			padding-left: 20px;
-			padding-right: 20px;
-			width: 10em;
-		}
-	}
-}
 
 @import 'sass/login.scss';
