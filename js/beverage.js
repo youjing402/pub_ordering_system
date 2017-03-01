@@ -24,8 +24,8 @@ var beer = [{
 				"amount-bought": 0
 			},
 			{
-				"name": "Carlsberg Export"
-				"gluten": true,
+				"name": "Carlsberg Export",
+				"gluten" : true,
 				"alcohol-level" : 5,
 				"img": "images/Carlsberg-Export.jpg",
 				"description" : "Maltig smak med inslag av knäckebröd, honung och citrusskal. Serveras vid 8-10°C till husmanskost eller som sällskapsdryck.",
@@ -58,7 +58,7 @@ var beer = [{
 				"amount-bought" : 0
 			},
 			{
-				"name" : "Arboga"
+				"name" : "Arboga",
 				"gluten" : true,
 				"alcohol-level" : 5.6,
 				"img" : "images/Arboga.jpg",
@@ -69,10 +69,10 @@ var beer = [{
 				"amount-bought" : 0
 			},
 			{
-				"name" : "Saxon"
+				"name" : "Saxon",
 				"gluten" : false,
 				"alcohol-level" : 4.1,
-				"img" : "images/glutenfree-Saxon.jpg"
+				"img" : "images/glutenfree-Saxon.jpg",
 				"description" : "Brödig smak med inslag av honung och apelsin. Serveras vid 6-8°C som sällskapsdryck eller till rätter av fisk och ljust kött.",
 				"volume" : 500,
 				"price" : 14,
@@ -98,7 +98,7 @@ var wine = [{
 				"name" : "Amarone",
 				"gluten" : true,
 				"alcohol-level" : 15,
-				"img" : "images/wine-Amarone.jpg"
+				"img" : "images/wine-Amarone.jpg",
 				"description" : "Kryddig, nyanserad smak med inslag av fat, russin, torkade körsbär, chokladpraliner, arrak, svartpeppar och kanel. Serveras vid cirka 18°C till lagrade hårdostar eller till smakrika rätter av mörkt kött.",
 				"volume" : 750,
 				"price" : 260,
