@@ -1,6 +1,6 @@
 
 
-var bear = [{
+var beer = [{
 				"name": "Passion",
 				"gluten": true,
 				"alcohol-free": false,
