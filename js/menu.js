@@ -18,6 +18,4 @@ $(document).ready(function() {
 		$('#item-detailed').addClass("hidden");
 		$('#item-collection').removeClass("hidden");
 	});	
-		
-
 });

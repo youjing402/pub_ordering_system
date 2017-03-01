@@ -23,6 +23,8 @@ add.onclick = function(event) {
 //If new drink, display square 2 and add to that, etc.
 //Can do once json details are being used
 
+/*Add another of this item to the cart. 
+/*Limit is 10. */
 plus1.onclick = function(event) {
 	if(event.target == plus1 && order < 10) {
 		order += 1;
@@ -33,6 +35,8 @@ plus1.onclick = function(event) {
 	}
 }
 
+/*Remove one of this item from the cart. 
+/*If number goes below 0, the drink is removed from view*/
 minus1.onclick = function(event) {
 	if(event.target == minus1 && order > 0) {
 		order -= 1;
@@ -43,5 +47,4 @@ minus1.onclick = function(event) {
 		sq1.style.display = 'none';
 	}
 }
-
 
