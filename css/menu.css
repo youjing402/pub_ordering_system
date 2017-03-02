@@ -126,7 +126,8 @@ textarea {
   margin: 0; }
 
 button {
-  overflow: visible; }
+  overflow: visible;
+  cursor: pointer; }
 
 button,
 select {
@@ -5979,7 +5980,8 @@ button {
       background-color: red;
       display: flex;
       align-items: center;
-      justify-content: center; }
+      justify-content: center; 
+      cursor: pointer;}
     #menu .detailed-card .drink-price {
       color: #ffd446;
       margin-bottom: 40px; }

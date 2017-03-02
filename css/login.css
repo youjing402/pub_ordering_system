@@ -43,6 +43,9 @@
     border: none;
     cursor: pointer;
     width: 47%; }
+  a {
+  	cursor:pointer;
+  }
   #modalLogin #loginbtn {
     background-color: transparent;
     width: auto; }

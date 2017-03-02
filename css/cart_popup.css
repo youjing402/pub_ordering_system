@@ -60,3 +60,12 @@
 	#square2 {
 		display: none;
 	    }
+	.fa.fa-plus {
+		cursor: pointer;
+	}
+	.fa.fa-minus {
+		cursor: pointer;
+	}
+	.category-tab {
+		cursor:pointer;
+	} 
