@@ -13,7 +13,11 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+span {
+  font-family: "Lato", sans-serif; }
+
+body {
   font-family: "Lato", sans-serif; }
 
 .row {
@@ -179,6 +183,16 @@ button {
   #menu .tab {
     color: white;
     font-size: 20pt; }
+  #menu .form-control {
+    width: 100%;
+    height: 34px;
+    padding: 1px 10px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
   #menu #addplus {
     float: right; }
   #menu #pricetag {
@@ -192,9 +206,11 @@ button {
   #menu .menucard:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   #menu .menucardcontainer {
-    padding: 0.01em 16px;
+    padding: 0 16px;
     max-width: 210px;
     background-color: grey; }
+    #menu .menucardcontainer #cardname {
+      margin-bottom: 5px; }
   #menu .select {
     position: absolute;
     z-index: 1; }
@@ -224,7 +240,7 @@ button {
       position: relative; }
   #menu .float-right {
     position: absolute;
-    right: 5px;
+    right: 0px;
     top: 10px; }
   #menu .side-bar {
     padding-top: 20px; }

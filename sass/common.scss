@@ -6,8 +6,13 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+span {
 	font-family: $lato;
+}
+
+body {
+  font-family: $lato;
 }
 
 .row {
