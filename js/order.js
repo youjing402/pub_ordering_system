@@ -1,12 +1,13 @@
 // Get the element
 var add = document.getElementById('add');
+var addplus = document.getElementsByClassName('plussign');
 var a1 = document.getElementById('a1');
 var sq1 = document.getElementById('square1');
 var plus1 = document.getElementById('plus1');
 var minus1 = document.getElementById('minus1');
 var order = 0;
 
-//Add element to cart
+//Add element to cart from detailed view
 add.onclick = function(event) {
 	if(event.target == add) {
 		order += 1;
@@ -14,15 +15,23 @@ add.onclick = function(event) {
 		a1.innerHTML = order;
 		$('#item-detailed').addClass("hidden");
 		$('#item-collection').removeClass("hidden");
-		//send json details about the beer - need beers in menu to have details
+		//TODO send json details about the beer to cart
 	}
 }
 
-//onclick add (after first time)
-//If same beer, add to above square1
-//If new drink, display square 2 and add to that, etc.
-//Can do once json details are being used
+//Add element to cart from card view
+function addElementToCart(){
+	for(var i = 0, length = addplus.length; i < length; i++) {
+		addplus[i].onclick = function(event) {
+				order += 1;
+				sq1.style.display = 'block';
+				a1.innerHTML = order;
+				//TODO send json details about the beer to cart
+		}
+	}
+}
 
+addElementToCart();
 /*Add another of this item to the cart. 
 /*Limit is 10. */
 plus1.onclick = function(event) {
@@ -48,3 +57,7 @@ minus1.onclick = function(event) {
 	}
 }
 
+//TODO
+//onclick add new square for different beers;
+//If same beer ordered, add to above square1
+//If new drink, display square 2 and add to that, etc.

@@ -8,7 +8,6 @@
 	<link href="vendor/bootstrap-sass/assets/stylesheets/_bootstrap." rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 	<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
-	<script src="js/menu.js"></script>
 
 </head>
 
@@ -19,11 +18,31 @@
 	<div id="modalLogin" class="modal">	
 	</div>
 
+	<br/>
 	<div class="search-bar">
 		<div class="wrapper">
 			<input type="text" class="form-control search-control" placeholder="Search">
 			<i class="fa fa-search float-right" aria-hidden="true"></i>
 		</div>
+	</div>
+	<br/>
+	
+	<div>
+	<select class="select" id="brand">
+	<option>Select Brand</option>
+	</select>
+	</div>
+	
+	<div>
+	<select class="select" id="sort">
+	<option>Sort By</option>
+	<option>Name</option>
+	<option>Popularity</option>
+	<option>Price: Highest to Lowest</option>
+	<option>Price: Lowest to Highest</option>
+	<option>Alcohol Level</option>
+	<option>Gluten Free</option>
+	</select>
 	</div>
 
 	<div>
@@ -31,28 +50,37 @@
 			<div class="bar-wrapper">
 				<div class="category-bar">
 					<div class="side-bar">
-						<div class="category-tab selected">
+						<div class="category-tab selected" id="beertab">
 							<div class="category-tab-bg">
 								<div class="rectangle">
-									<a>Beer</a>
+									<text class="tab">Beer</text>
 								</div>
 								<div class="arrow-right">
 								</div>
 							</div>
 						</div>
-						<div class="category-tab">
+						<div class="category-tab" id="winetab">
 							<div class="category-tab-bg">
 								<div class="rectangle">
-									<a>Wine</a>
+									<text class="tab">Wine</text>
 								</div>
 								<div class="arrow-right">
 								</div>
 							</div>
 						</div>
-						<div class="category-tab">
+						<div class="category-tab" id="cidertab">
 							<div class="category-tab-bg">
 								<div class="rectangle">
-									<a>Whiskey</a>
+									<text class="tab">Cider</text>
+								</div>
+								<div class="arrow-right">
+								</div>
+							</div>
+						</div>
+						<div class="category-tab" id="whiskeytab">
+							<div class="category-tab-bg">
+								<div class="rectangle">
+									<text class="tab">Whiskey</text>
 								</div>
 								<div class="arrow-right">
 								</div>
@@ -61,30 +89,41 @@
 					</div>
 				</div>
 
-				<div class="side-bar">
+				<!--<div class="side-bar">
 					<div class="brand-bar third-cate-band">
 						<p><a>Brand1</a></p>
 						<p><a>Brand2</a></p>
 						<p><a>Brand3</a></p>
 					</div>
-				</div>
+				</div>-->
 			</div>
 
 			<div class="item-collection" id="item-collection">
-				
+			
 			</div>
+			
+			<!--<div class="w3-card-8" id="card-item">
+  					<img src="" id="pic" class="pic">
+ 					<div class="w3-container w3-grey">
+ 					   <h4 id="cardname"><b>Name</b></h4> 
+    					<p id="pricetag">Price</p> <p id="kr">kr</p> 
+    					<i class="fa fa-plus" class="addplus" id="addplus" aria-hidden="true"></i>
+    					<p/>
+    				</div>
+			</div>-->
+			
 			<div class="col-sm-10 item-detailed row hidden" id="item-detailed">
 				<div class="detailed-card">
 					<div class="close-btn">
 						<b>&times;</b>
 					</div>
 					<div class="col-sm-6 detailed-img-wrapper">
-						<img src="http://www.newyorker.com/wp-content/uploads/2015/05/Stayner-The-Quest-to-Reproduce-the-Worlds-Oldest-Beer-936.jpg">
+						<img src="http://www.newyorker.com/wp-content/uploads/2015/05/Stayner-The-Quest-to-Reproduce-the-Worlds-Oldest-Beer-936.jpg" id="drink-img">
 					</div>
 					<div class="col-sm-6 detailed-info-wrapper">
-						<h2 class="drink-name">Beer Name 1</h2>
-						<h4 class="drink-price">50 kr</h4>
-						<p class="drink-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<h2 class="drink-name" id="drink-name">Beer Name 1</h2>
+						<h4 class="drink-price" id="drink-price">50 kr</h4>
+						<p class="drink-description" id="drink-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						<button class="btn btn-default pull-right add-cart-btn" id="add" ><i class="fa fa-cart-plus" aria-hidden="true"></i>add to cart</button>
 					</div>
 				</div>
@@ -97,6 +136,9 @@
 	</div>
 
 <script src="js/order.js"></script>
-	
+<script src="js/beverage.js"></script>
+<script src="js/menu.js"></script>
+
+
 </body>
 </html>
