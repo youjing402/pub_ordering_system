@@ -177,7 +177,7 @@ button {
 
 #menu {
   margin: 0px;
-  background-color: #4f4844;
+  background-color: #35373c;
   /*Align plus button to right*/
   /* Add some padding inside the card container */ }
   #menu .tab {
@@ -200,17 +200,23 @@ button {
   #menu #kr {
     display: inline; }
   #menu .menucard {
-    margin: 10px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: grey; }
-  #menu .menucard:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    margin: 10px 10px 50px 10px; }
   #menu .menucardcontainer {
     padding: 0 16px;
-    max-width: 210px;
-    background-color: grey; }
+    max-width: 210px; }
     #menu .menucardcontainer #cardname {
+      margin-bottom: 5px;
+      margin-top: 2px;
+      color: white;
+      text-align: center; }
+    #menu .menucardcontainer #pricediv {
+      width: 100%;
+      text-align: center;
       margin-bottom: 5px; }
+    #menu .menucardcontainer #pricetag {
+      color: #ffd446; }
+    #menu .menucardcontainer #kr {
+      color: #ffd446; }
   #menu .select {
     position: absolute;
     z-index: 1; }
@@ -220,10 +226,7 @@ button {
     margin-left: 750px; }
   #menu .card {
     /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s; }
-  #menu .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
   #menu .cardcontainer {
     padding: 2px 16px; }
   #menu button {
@@ -360,11 +363,15 @@ button {
     position: absolute;
     right: 0px; }
   #menu .pic {
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-filter: drop-shadow(5px 5px 5px #111);
+    filter: drop-shadow(5px 5px 5px #111); }
   #menu .category-tab {
     cursor: pointer; }
   #menu .plussign {
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #ccc; }
   #menu .select {
     cursor: pointer; }
 

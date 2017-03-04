@@ -7,7 +7,7 @@ $(document).ready(function() {
 	//Create and populate cards for every item in the beer object array
 	for(var i = 0; i < beer.length; i++) {
 		var values = beer[i];
-		$('#item-collection').append('<div class="menucard" id="card-item"> <img src="' + beer[i].img +'" id="pic" class="pic"> <div class="menucardcontainer"> <h4 id="cardname"><b>' + beer[i].name + '</b></h4> <p id="pricetag">' + beer[i].price + '</p> <p id="kr">kr</p> <i class="fa fa-plus plussign" id="addplus" aria-hidden="true"></i><p/></div></div>');
+		$('#item-collection').append('<div class="menucard" id="card-item"> <img src="' + beer[i].img +'" id="pic" class="pic"> <div class="menucardcontainer"> <h4 id="cardname"><b>' + beer[i].name + '</b></h4> <div id="pricediv"><p id="pricetag">' + beer[i].price + '</p> <p id="kr">kr</p></div><button class="plussign" id="addplus">add</button></div></div>');
 	};		
 				
 	//When the user clicks on the image the detailed card view is displayed
