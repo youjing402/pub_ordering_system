@@ -1,0 +1,30 @@
+.navbar {
+	margin: 0;
+	padding-bottom: 0;
+	border-color: white;
+	border-width: 0;
+	border-radius: 0;
+	background-color: black;
+	color: white;
+	opacity: 0.8;
+}
+
+.navbar-brand {
+	color: white;
+
+	>li>a {
+		color: white;
+	}
+}
+
+.navbar-default .navbar-nav {
+
+	&>.active>a {
+		color: white;
+		background-color: #aaa;
+	}
+
+	&>li>a {
+		color: white;
+	}
+}

@@ -3,3 +3,24 @@
  * Copyright 2016 - UIP Team
  * Licensed under MIT (https://github.com/FitMi/FitMi-landing/blob/master/LICENSE)
  */
+.navbar {
+  margin: 0;
+  padding-bottom: 0;
+  border-color: white;
+  border-width: 0;
+  border-radius: 0;
+  background-color: black;
+  color: white;
+  opacity: 0.8; }
+
+.navbar-brand {
+  color: white; }
+  .navbar-brand > li > a {
+    color: white; }
+
+.navbar-default .navbar-nav > .active > a {
+  color: white;
+  background-color: #aaa; }
+
+.navbar-default .navbar-nav > li > a {
+  color: white; }
