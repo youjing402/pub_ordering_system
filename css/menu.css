@@ -6047,14 +6047,6 @@ button {
   #menu .cart-popup {
     position: absolute;
     right: 0px; }
-   #menu .pic {
-    	cursor: pointer; }
-   #menu .category-tab {
-    	cursor: pointer; }
-   #menu .plussign {
-    	cursor: pointer; }
-   #menu .select {
-    	cursor: pointer; }
 
 #modalLogin {
   /* Full-width input fields */
