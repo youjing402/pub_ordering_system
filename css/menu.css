@@ -191,6 +191,21 @@ table {
 td,
 th {
   padding: 0; }
+  
+.card {
+	/* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.cardcontainer {
+    padding: 2px 16px;
+}
 
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -5876,6 +5891,51 @@ button {
   border: none;
   cursor: pointer;
   width: 100%; }
+  
+.tab {
+	color: white;
+	font-size: 20pt;
+}
+
+/*Align plus button to right*/
+#addplus {
+	float: right;
+}
+
+#pricetag {
+	display: inline;
+}
+
+#kr {
+	display: inline;
+}
+
+.menucard {
+	margin: 10px;
+	box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.menucard:hover{
+	box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.menucardcontainer {
+	padding:0.01em 16px;
+	background-color: grey;
+}
+
+.select {
+	position: absolute;
+	z-index:1;
+}
+
+#sort {
+	margin-left: 900px;
+}
+
+#brand {
+	margin-left: 750px;
+}
 
 #menu {
   background-color: #4f4844; }
@@ -5884,7 +5944,7 @@ button {
     justify-content: space-between;
     max-width: 82%; }
   #menu .search-bar {
-    width: 80%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto; }
     #menu .search-bar .wrapper {
@@ -5899,7 +5959,7 @@ button {
     padding-top: 30px; }
   #menu .category-tab {
     position: relative;
-    margin-bottom: 35px; }
+    margin-bottom: 10px; }
     #menu .category-tab .rectangle {
       width: 10em;
       height: 50px;
@@ -5967,6 +6027,7 @@ button {
   #menu .detailed-card {
     width: 80%;
     height: 500px;
+    margin-left: 140px;
     background-color: #000;
     box-shadow: 10px 10px 5px #333;
     position: relative; }
@@ -5981,7 +6042,8 @@ button {
       display: flex;
       align-items: center;
       justify-content: center; 
-      cursor: pointer;}
+      cursor: pointer;
+      z-index:1}
     #menu .detailed-card .drink-price {
       color: #ffd446;
       margin-bottom: 40px; }
