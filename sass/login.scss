@@ -20,6 +20,10 @@
         width: 47%;
     }
 
+    a {
+        cursor:pointer;
+    }
+
     #loginbtn {
         background-color: transparent;
         width: auto;
@@ -114,11 +118,11 @@
     /* Change styles for span and cancel button on extra small screens */
     @media screen and (max-width: 300px) {
         span.forgotpassword {
-           display: block;
-           float: none;
-        }
-        .cancelbtn {
-           width: 100%;
-        }
-    }
+         display: block;
+         float: none;
+     }
+     .cancelbtn {
+         width: 100%;
+     }
+ }
 }

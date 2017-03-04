@@ -69,4 +69,21 @@
 	.btn-grp {
 		display: flex;
 	}
+
+	#square1 {
+		display: none;
+	}
+	#square2 {
+		display: none;
+	}
+	.fa.fa-plus {
+		cursor: pointer;
+	}
+	.fa.fa-minus {
+		cursor: pointer;
+	}
+	.category-tab {
+		cursor:pointer;
+	} 
+
 }
