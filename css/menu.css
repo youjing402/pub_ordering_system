@@ -6047,14 +6047,13 @@ button {
   #menu .cart-popup {
     position: absolute;
     right: 0px; }
-    
-    .pic {
+   #menu .pic {
     	cursor: pointer; }
-    .category-tab {
+   #menu .category-tab {
     	cursor: pointer; }
-    .plussign {
+   #menu .plussign {
     	cursor: pointer; }
-    .select {
+   #menu .select {
     	cursor: pointer; }
 
 #modalLogin {
