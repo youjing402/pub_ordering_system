@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	// load the external components
 	$('#navBar').load("./navbar.html");
 	$('#modalLogin').load("./modal_login.html");
 	$('#cartPopup').load("./cart_popup.html");
