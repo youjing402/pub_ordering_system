@@ -12,6 +12,8 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 @import url("https://fonts.googleapis.com/css?family=Lobster|Pacifico|Lato");
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url("https://fonts.googleapis.com/css?family=Lobster|Pacifico|Lato");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -124,7 +126,8 @@ textarea {
   margin: 0; }
 
 button {
-  overflow: visible; }
+  overflow: visible;
+  cursor: pointer; }
 
 button,
 select {
@@ -5865,6 +5868,15 @@ a {
 .navbar-default .navbar-nav > li > a {
   color: white; }
 
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  width: 100%; }
+
 #menu {
   background-color: #4f4844; }
   #menu .row-wrapper {
@@ -5968,7 +5980,8 @@ a {
       background-color: red;
       display: flex;
       align-items: center;
-      justify-content: center; }
+      justify-content: center; 
+      cursor: pointer;}
     #menu .detailed-card .drink-price {
       color: #ffd446;
       margin-bottom: 40px; }
@@ -5996,39 +6009,107 @@ a {
     position: absolute;
     right: 0px; }
 
-#about .bg-img {
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover; }
+#modalLogin {
+  /* Full-width input fields */
+  /* Set a style for all buttons */
+  /* Extra styles for the cancel button */
+  /* Center the image and position the close button */
+  /* The Modal (background) */
+  /* Modal Login Box */
+  /* The Close Button (x) */
+  /* Add Zoom Animation 
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
 
-#about .bg-wrapper {
-  position: relative; }
-
-#about .float-intro {
-  position: absolute;
-  top: 120px;
-  right: 20px;
-  width: 45%; }
-  #about .float-intro .title {
-    font-size: 50px;
-    margin-bottom: 20px;
-    font-family: "Pacifico", cursive;
+    @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)} 
+        to {-webkit-transform: scale(1)}
+    }
+        
+    @keyframes animatezoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+    }
+    */
+  /* Change styles for span and cancel button on extra small screens */ }
+  #modalLogin input[type=text], #modalLogin input[type=password] {
+    width: 47%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box; }
+  #modalLogin button {
+    background-color: #4CAF50;
     color: white;
-    border-color: black; }
-  #about .float-intro p {
-    width: 70%;
-    margin-left: 10px;
-    font-family: "Lato", sans-serif;
-    color: #bbb; }
-  #about .float-intro .btn {
-    background-color: #ffd446;
-    color: white;
-    font-size: 20px;
-    font-family: "Lato", sans-serif;
-    border-radius: 0;
-    border: 0;
-    margin-top: 40px;
-    margin-left: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 10em; }
+    padding: 14px 20px;
+    margin: auto;
+    border: none;
+    cursor: pointer;
+    width: 47%; }
+  #modalLogin #loginbtn {
+    background-color: transparent;
+    width: auto; }
+  #modalLogin .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    float: left; }
+  #modalLogin .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+    font-family: Palatino; }
+  #modalLogin .container {
+    padding: 16px; }
+  #modalLogin #cancelsection {
+    background-color: #bab8b8;
+    width: 100%; }
+  #modalLogin span.forgotpassword {
+    float: right;
+    padding-top: 16px; }
+  #modalLogin .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: #fff;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px; }
+  #modalLogin .modal-login {
+    background-color: #fff;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%; }
+  #modalLogin .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold; }
+  #modalLogin .close:hover,
+  #modalLogin .close:focus {
+    color: red;
+    cursor: pointer; }
+  @media screen and (max-width: 300px) {
+    #modalLogin span.forgotpassword {
+      display: block;
+      float: none; }
+    #modalLogin .cancelbtn {
+      width: 100%; } }

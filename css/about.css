@@ -10,6 +10,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url("https://fonts.googleapis.com/css?family=Lobster|Pacifico|Lato");
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url("https://fonts.googleapis.com/css?family=Lobster|Pacifico|Lato");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5819,5 +5823,92 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.bg-img {
-  width: 100vw; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Lato", sans-serif; }
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px; }
+
+.hidden {
+  display: none; }
+
+a {
+  color: white; }
+
+.search-control {
+  background-color: #ddd; }
+
+.navbar {
+  margin: 0;
+  padding-bottom: 0;
+  border-color: white;
+  border-width: 0;
+  border-radius: 0;
+  background-color: black;
+  color: white;
+  opacity: 0.8; }
+
+.navbar-brand {
+  color: white; }
+  .navbar-brand > li > a {
+    color: white; }
+
+.navbar-default .navbar-nav > .active > a {
+  color: white;
+  background-color: #aaa; }
+
+.navbar-default .navbar-nav > li > a {
+  color: white; }
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  width: 100%; }
+
+#about .bg-img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover; }
+
+#about .bg-wrapper {
+  position: relative; }
+
+#about .float-intro {
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  width: 45%; }
+  #about .float-intro .title {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: "Pacifico", cursive;
+    color: white;
+    border-color: black; }
+  #about .float-intro p {
+    width: 70%;
+    margin-left: 10px;
+    font-family: "Lato", sans-serif;
+    color: #bbb; }
+  #about .float-intro .btn {
+    background-color: #ffd446;
+    color: white;
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    border-radius: 0;
+    border: 0;
+    margin-top: 40px;
+    margin-left: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 10em; }

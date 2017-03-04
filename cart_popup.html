@@ -3,20 +3,20 @@
 <link href="css/cart_popup.css" rel="stylesheet">
 
 <div class="title"><i class="fa fa-shopping-cart fa-large" aria-hidden="true"></i> Cart</div>
-<div class="cart-item square">
+<div class="cart-item square" id="square1">
 	<img src="http://www.newyorker.com/wp-content/uploads/2015/05/Stayner-The-Quest-to-Reproduce-the-Worlds-Oldest-Beer-936.jpg">
 	<div class="content">
 		<h4>beer1</h4>
 		<h5>50kr</h5>
-		<div class="amount"><i class="fa fa-minus" aria-hidden="true"></i>1<i class="fa fa-plus" aria-hidden="true"></i></div>
+		<div class="amount"><i class="fa fa-minus" id="minus1" aria-hidden="true"></i><text id="a1">0</text><i class="fa fa-plus" id="plus1" aria-hidden="true"></i></div>
 	</div>
 </div>
-<div class="cart-item square">
+<div class="cart-item square" id="square2">
 	<img src="http://www.newyorker.com/wp-content/uploads/2015/05/Stayner-The-Quest-to-Reproduce-the-Worlds-Oldest-Beer-936.jpg">
 	<div class="content">
 		<h4>beer1</h4>
 		<h5>50kr</h5>
-		<div class="amount"><i class="fa fa-minus" aria-hidden="true"></i>1<i class="fa fa-plus" aria-hidden="true"></i></div>
+		<div class="amount"><i class="fa fa-minus" id="minus2" aria-hidden="true"></i><text id="a2">0</text><i class="fa fa-plus" id="plus2" aria-hidden="true"></i></div>
 	</div>
 </div>
 
@@ -24,4 +24,7 @@
 	<button class="half-btn undo-btn">Undo</button>
 	<button class="half-btn redo-btn">Redo</button>
 </div>
+
+<script src="js/order.js"></script>
+
 <button>Order!</button>

@@ -7,7 +7,8 @@
   margin-top: 40px;
   padding-top: 20px;
   color: white;
-  background-color: #6a7278; }
+  background-color: #6a7278;
+  min-width: 15%; }
   #cartPopup .title {
     display: flex;
     justify-content: center;
@@ -25,7 +26,8 @@
     width: 80%;
     max-width: 120px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto; 
+    }
   #cartPopup .square:after {
     content: "";
     display: block;
@@ -52,3 +54,18 @@
         margin-right: 10px; }
   #cartPopup .btn-grp {
     display: flex; }
+    #square1 {
+		display: none;
+	    }
+	#square2 {
+		display: none;
+	    }
+	.fa.fa-plus {
+		cursor: pointer;
+	}
+	.fa.fa-minus {
+		cursor: pointer;
+	}
+	.category-tab {
+		cursor:pointer;
+	} 

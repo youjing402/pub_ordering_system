@@ -1,0 +1,69 @@
+@import "sass/variables.scss";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-family: $lato;
+}
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.hidden {
+	display: none;
+}
+
+a {
+	color: white;
+}
+
+.search-control {
+	background-color: #ddd;
+}
+
+.navbar {
+	margin: 0;
+	padding-bottom: 0;
+	border-color: white;
+	border-width: 0;
+	border-radius: 0;
+	background-color: black;
+	color: white;
+	opacity: 0.8;
+}
+
+.navbar-brand {
+	color: white;
+
+	>li>a {
+		color: white;
+	}
+}
+
+.navbar-default .navbar-nav {
+
+	&>.active>a {
+		color: white;
+		background-color: #aaa;
+	}
+
+	&>li>a {
+		color: white;
+	}
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: auto;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
