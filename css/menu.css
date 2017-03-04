@@ -172,6 +172,7 @@ button {
     width: 900px; } }
 
 #menu {
+  margin: 0px;
   background-color: #4f4844;
   /*Align plus button to right*/
   /* Add some padding inside the card container */ }

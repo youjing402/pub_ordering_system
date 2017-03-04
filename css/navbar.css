@@ -4,7 +4,9 @@
  * Licensed under MIT (https://github.com/FitMi/FitMi-landing/blob/master/LICENSE)
  */
 .navbar {
+  width: 100vw;
   margin: 0;
+  padding-top: 0;
   padding-bottom: 0;
   border-color: white;
   border-width: 0;
