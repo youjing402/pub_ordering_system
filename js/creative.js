@@ -4,4 +4,7 @@ $(document).ready(function() {
 
 	// load the login modal
 	$('#modalLogin').load("./modal_login.html");
+	
+	// load the detailed card modal
+	$('#detailedMenuModal').load("./detailedmenucard.html");
 });

@@ -1,5 +1,5 @@
 // Get the element
-var add = document.getElementById('add');
+var add = document.getElementById('addToCartButton');
 var addplus = document.getElementsByClassName('plussign');
 var a1 = document.getElementById('a1');
 var sq1 = document.getElementById('square1');
@@ -13,8 +13,7 @@ add.onclick = function(event) {
 		order += 1;
 		sq1.style.display = 'block';
 		a1.innerHTML = order;
-		$('#item-detailed').addClass("hidden");
-		$('#item-collection').removeClass("hidden");
+		menuModal.style.display = "none";
 		//TODO send json details about the beer to cart
 	}
 }
