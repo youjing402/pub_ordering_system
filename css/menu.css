@@ -228,7 +228,8 @@ button {
   #menu .plussign:hover {
     outline: 1px solid #ffd446;
     outline-offset: 3px;
-    color: #ffd446; }
+    color: #ffd446;
+    font-weight: bold; }
   #menu .desc {
     display: none; }
   #menu .detailpic {
@@ -266,13 +267,13 @@ button {
     cursor: pointer; }
   #menu #sort {
     position: absolute;
-    right: 250px; }
+    right: 220px; }
     @media screen and (max-width: 800px) {
       #menu #sort {
         display: none; } }
   #menu #brand {
     position: absolute;
-    right: 450px; }
+    right: 420px; }
     @media screen and (max-width: 800px) {
       #menu #brand {
         display: none; } }

@@ -71,6 +71,7 @@
 		outline: 1px solid $theme-sec-color;
 		outline-offset: 3px;
 		color: $theme-sec-color;
+		font-weight: bold;
 	}
 
 
@@ -136,7 +137,7 @@
 
 	#sort {
 		position: absolute;
-		right: 250px;
+		right: 220px;
 		@media screen and (max-width: $mobile-break-point) {
 			display: none;
 		}
@@ -144,7 +145,7 @@
 
 	#brand {
 		position: absolute;
-		right: 450px;
+		right: 420px;
 		@media screen and (max-width: $mobile-break-point) {
 			display: none;
 		}
