@@ -40,24 +40,31 @@
 		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	}
 
-	/*Align plus button to right*/
-	#addplus {
-		float: right; 
-		margin-bottom: 0px;
-	}
 	#cardname {
 		margin-top: 5px;
 		margin-bottom: 5px;
 	}
 	.pricetag {
-		display: inline;
-		margin-bottom: 0px;
+		margin-bottom: 5px;
+		margin-top: 5px;
 		color: $theme-sec-color;
+		text-align: center;
 	}
 	.drink{
-		margin: 3px;
-		margin-bottom: 0px 
+		margin-top: 10px;
+		margin-bottom: 0px;
+		text-align: center;
+		margin-bottom: 5px;
+		color: white;
+		text-align: center;
 	}  	
+
+	.plussign {
+		cursor: pointer; 
+		background-color: transparent;
+		border: 1px solid #ccc;
+	}
+
 	.desc {
 		display: none;
 	}
@@ -78,27 +85,9 @@
 		padding-bottom: 8px;
 		max-width: 210px;
 		margin-top: -5px;
-		-webkit-filter: drop-shadow(5px 5px 5px #111);
-		filter: drop-shadow(5px 5px 5px #111); 
-	}
-
-	#cardname {
-		margin-bottom: 5px;
-		margin-top: 2px;
-		color: white;
-		text-align: center;
-	}
-
-	#pricediv {
-		width: 100%;
-		text-align: center;
-		margin-bottom: 5px;
-	}
-
-	#kr {
-		color: $theme-sec-color;
-	}
-	
+		//-webkit-filter: drop-shadow(5px 5px 5px #111);
+		//filter: drop-shadow(5px 5px 5px #111); 
+	}	
 
 	.select {
 		position: absolute;
@@ -247,33 +236,6 @@
 		}
 	}
 
-	.item-card {
-		padding-top: 0px;
-		position: relative;
-		img {
-			width: 180px;
-			height: 180px;
-			object-fit: cover;
-			border-radius: 0px 0px 10px 10px;
-		}
-		margin: 15px 15px 15px 15px;
-		border-radius: 0px 0px 10px 10px;
-		//border-style: solid;
-		//border-width: 1px;
-		//border-radius: 0px;
-		//border-color: #ccc;
-	}
-
-	.card-cap {
-		padding: 5px;
-		border-radius: 0px 0px 10px 10px;
-		background-color: rgba(231, 231, 231, 0.5);
-		color: #555;
-		position: absolute;
-		bottom: 0px;
-		width: 100%;
-	}
-
 	.bar-wrapper {
 		display: flex;
 	}
@@ -288,10 +250,6 @@
 		color: white;
 	}
 
-	.fa-large {
-		font-size: 15pt;
-	}
-
 	.item-detailed {
 		margin-top: 40px;
 		color: white;
@@ -302,7 +260,7 @@
 		height: 500px;
 		margin-left: 140px;
 		background-color: #000;
-		box-shadow: 10px 10px 5px #333;
+		//box-shadow: 10px 10px 5px #333;
 		position: relative;
 
 		.close-btn {
@@ -380,17 +338,14 @@
 		-webkit-filter: drop-shadow(5px 5px 5px #111);
 		filter: drop-shadow(5px 5px 5px #111);
 	}
+
 	.category-tab {
 		cursor: pointer; 
 	}
-	.plussign {
-		cursor: pointer; 
-		background-color: transparent;
-	}
+
 	.select {
 		cursor: pointer; 
 	}
-
 
 }
 

@@ -178,7 +178,6 @@ button {
 #menu {
   margin: 0px;
   background-color: #35373c;
-  /*Align plus button to right*/
   /* Add some padding inside the card container */ }
   #menu .mobile-category-bar {
     display: flex;
@@ -205,19 +204,25 @@ button {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
-  #menu #addplus {
-    float: right;
-    margin-bottom: 0px; }
   #menu #cardname {
     margin-top: 5px;
     margin-bottom: 5px; }
   #menu .pricetag {
-    display: inline;
-    margin-bottom: 0px;
-    color: #ffd446; }
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: #ffd446;
+    text-align: center; }
   #menu .drink {
-    margin: 3px;
-    margin-bottom: 0px; }
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: white;
+    text-align: center; }
+  #menu .plussign {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #ccc; }
   #menu .desc {
     display: none; }
   #menu .detailpic {
@@ -228,20 +233,7 @@ button {
     padding: 0.01em 16px;
     padding-bottom: 8px;
     max-width: 210px;
-    margin-top: -5px;
-    -webkit-filter: drop-shadow(5px 5px 5px #111);
-    filter: drop-shadow(5px 5px 5px #111); }
-  #menu #cardname {
-    margin-bottom: 5px;
-    margin-top: 2px;
-    color: white;
-    text-align: center; }
-  #menu #pricediv {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 5px; }
-  #menu #kr {
-    color: #ffd446; }
+    margin-top: -5px; }
   #menu .select {
     position: absolute;
     cursor: pointer; }
@@ -330,24 +322,6 @@ button {
     @media screen and (max-width: 800px) {
       #menu .item-collection {
         justify-content: center; } }
-  #menu .item-card {
-    padding-top: 0px;
-    position: relative;
-    margin: 15px 15px 15px 15px;
-    border-radius: 0px 0px 10px 10px; }
-    #menu .item-card img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 0px 0px 10px 10px; }
-  #menu .card-cap {
-    padding: 5px;
-    border-radius: 0px 0px 10px 10px;
-    background-color: rgba(231, 231, 231, 0.5);
-    color: #555;
-    position: absolute;
-    bottom: 0px;
-    width: 100%; }
   #menu .bar-wrapper {
     display: flex; }
   #menu .brand-bar {
@@ -356,8 +330,6 @@ button {
   #menu .sub-title {
     margin-bottom: 20px;
     color: white; }
-  #menu .fa-large {
-    font-size: 15pt; }
   #menu .item-detailed {
     margin-top: 40px;
     color: white; }
@@ -366,7 +338,6 @@ button {
     height: 500px;
     margin-left: 140px;
     background-color: #000;
-    box-shadow: 10px 10px 5px #333;
     position: relative; }
     #menu .detailed-card .close-btn {
       position: absolute;
@@ -416,9 +387,6 @@ button {
     filter: drop-shadow(5px 5px 5px #111); }
   #menu .category-tab {
     cursor: pointer; }
-  #menu .plussign {
-    cursor: pointer;
-    background-color: transparent; }
   #menu .select {
     cursor: pointer; }
 
