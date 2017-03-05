@@ -135,20 +135,27 @@
 		cursor: pointer;
 	}
 
-	#sort {
-		position: absolute;
-		right: 220px;
+	.dropdown-grp {
 		@media screen and (max-width: $mobile-break-point) {
-			display: none;
+			display: flex;
+			justify-content: space-around;
 		}
-	}
 
-	#brand {
-		position: absolute;
-		right: 420px;
-		@media screen and (max-width: $mobile-break-point) {
-			display: none;
+		#sort {
+			@media screen and (min-width: $mobile-break-point) {
+				position: absolute;
+				right: 220px;
+			}
+			
 		}
+
+		#brand {
+			@media screen and (min-width: $mobile-break-point) {
+				position: absolute;
+				right: 420px;
+			}
+		}
+
 	}
 
 	.card {

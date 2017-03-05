@@ -265,18 +265,18 @@ button {
     display: block; }
   #menu .select {
     cursor: pointer; }
-  #menu #sort {
-    position: absolute;
-    right: 220px; }
-    @media screen and (max-width: 800px) {
-      #menu #sort {
-        display: none; } }
-  #menu #brand {
-    position: absolute;
-    right: 420px; }
-    @media screen and (max-width: 800px) {
-      #menu #brand {
-        display: none; } }
+  @media screen and (max-width: 800px) {
+    #menu .dropdown-grp {
+      display: flex;
+      justify-content: space-around; } }
+  @media screen and (min-width: 800px) {
+    #menu .dropdown-grp #sort {
+      position: absolute;
+      right: 220px; } }
+  @media screen and (min-width: 800px) {
+    #menu .dropdown-grp #brand {
+      position: absolute;
+      right: 420px; } }
   #menu .card {
     /* Add shadows to create the "card" effect */
     transition: 0.3s; }
