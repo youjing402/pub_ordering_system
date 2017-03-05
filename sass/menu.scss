@@ -43,27 +43,29 @@
 	/*Align plus button to right*/
 	#addplus {
 		float: right; 
-		margin-bottom: 0px;}
-		#cardname {
-			margin-top: 5px;
-			margin-bottom: 5px;}
-			.pricetag {
-				display: inline;
-				margin-bottom: 0px;
-				color: $theme-sec-color;
-			}
-			.drink{
-				margin: 3px;
-				margin-bottom: 0px 
-			}  	
-			.desc {
-				display: none;
-			}
-			.detailpic {
-				display: none;
-			}
-			.menucard {
-				margin: 10px 10px 50px 10px;
+		margin-bottom: 0px;
+	}
+	#cardname {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	.pricetag {
+		display: inline;
+		margin-bottom: 0px;
+		color: $theme-sec-color;
+	}
+	.drink{
+		margin: 3px;
+		margin-bottom: 0px 
+	}  	
+	.desc {
+		display: none;
+	}
+	.detailpic {
+		display: none;
+	}
+	.menucard {
+		margin: 10px 10px 50px 10px;
 		//box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 	}
 
