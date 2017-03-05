@@ -36,23 +36,26 @@
 	</div>
 	
 	<!-- Brand selection dropdown menu -->
-	<div>
-		<select class="select" id="brand">
-			<option>Select Brand</option>
-		</select>
+	<div class="dropdown select" id="brand">
+		<button class="dropbtn" id="brandDropBtn">Select brand</button>
+		<div class="dropdown-content hidden" id="brandDropContent">
+			<a href="#">brand1</a>
+			<a href="#">brand2</a>
+			<a href="#">brand3</a>
+		</div>
 	</div>
 
 	<!-- Sorting selection dropdown menu -->
-	<div>
-		<select class="select" id="sort">
-			<option>Sort By</option>
-			<option>Name</option>
-			<option>Popularity</option>
-			<option>Price: Highest to Lowest</option>
-			<option>Price: Lowest to Highest</option>
-			<option>Alcohol Level</option>
-			<option>Gluten Free</option>
-		</select>
+	<div class="dropdown select" id="sort">
+		<button class="dropbtn" id="sortDropBtn">Sort by</button>
+		<div class="dropdown-content hidden" id="sortDropContent">
+			<a href="#">Name</a>
+			<a href="#">Popularity</a>
+			<a href="#">Price: Highest to Lowest</a>
+			<a href="#">Price: Lowest to Highest</a>
+			<a href="#">Alcohol Level</a>
+			<a href="#">Gluten Free</a>
+		</div>
 	</div>
 
 	<div class="mobile-tab-grp">
@@ -71,7 +74,7 @@
 
 			<!-- Sorting selection dropdown menu -->
 			<div>
-			<select class="mobile-select" id="mobile-sort">
+				<select class="mobile-select" id="mobile-sort">
 					<option>Sort By</option>
 					<option>Name</option>
 					<option>Popularity</option>

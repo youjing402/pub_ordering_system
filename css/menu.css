@@ -178,6 +178,7 @@ button {
 #menu {
   margin: 0px;
   background-color: #35373c;
+  position: relative;
   /* Add some padding inside the card container */ }
   #menu .mobile-category-bar {
     display: flex;
@@ -234,16 +235,32 @@ button {
     padding-bottom: 8px;
     max-width: 210px;
     margin-top: -5px; }
-  #menu .select {
+  #menu .dropbtn {
+    font-size: 12px;
+    width: 14em; }
+  #menu .dropdown-content {
+    font-size: 12px;
     position: absolute;
+    background-color: #f9f9f9;
+    width: 14em;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; }
+  #menu .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; }
+  #menu .select {
     cursor: pointer; }
   #menu #sort {
-    margin-left: 900px; }
+    position: absolute;
+    right: 250px; }
     @media screen and (max-width: 800px) {
       #menu #sort {
         display: none; } }
   #menu #brand {
-    margin-left: 750px; }
+    position: absolute;
+    right: 450px; }
     @media screen and (max-width: 800px) {
       #menu #brand {
         display: none; } }
@@ -257,7 +274,8 @@ button {
   #menu .row-wrapper {
     display: flex;
     justify-content: space-between;
-    max-width: 82%; }
+    max-width: 82%;
+    margin-top: 20px; }
     @media screen and (max-width: 800px) {
       #menu .row-wrapper {
         justify-content: center;
