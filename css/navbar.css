@@ -3,6 +3,8 @@
  * Copyright 2016 - UIP Team
  * Licensed under MIT (https://github.com/FitMi/FitMi-landing/blob/master/LICENSE)
  */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url("https://fonts.googleapis.com/css?family=Lobster|Pacifico|Lato");
 #navBar .navbar {
   margin: 0;
   height: 50px;
@@ -16,6 +18,9 @@
   opacity: 0.8;
   position: relative;
   padding-left: 20px; }
+  @media screen and (max-width: 800px) {
+    #navBar .navbar {
+      margin-bottom: 0; } }
 
 #navBar .brand {
   font-size: 18px;
@@ -47,8 +52,9 @@
 #navBar .right-tab-group {
   display: flex;
   position: absolute;
-  height: 10%;
-  right: 20px; }
+  height: 100%;
+  right: 20px;
+  top: 0px; }
 
 #navBar a {
   text-decoration: none; }
