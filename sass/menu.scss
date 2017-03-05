@@ -93,6 +93,9 @@
 	.dropbtn {
 		font-size: 12px;
 		width: 14em;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-color: #aaa;
 	}
 
 	.dropdown-content {
@@ -109,6 +112,10 @@
 		padding: 12px 16px;
 		text-decoration: none;
 		display: block;
+	}
+
+	.dropdown-content a:hover {
+		background-color: #ddd;
 	}
 
 	.dropdown:hover .dropdown-content {
