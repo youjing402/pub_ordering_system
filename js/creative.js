@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	// load the navigation bar
 	$('#navBar').load("./navbar.html");
 
@@ -7,4 +8,5 @@ $(document).ready(function() {
 	
 	// load the detailed card modal
 	$('#detailedMenuModal').load("./detailedmenucard.html");
+
 });
