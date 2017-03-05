@@ -24,8 +24,21 @@
 
 	/*Align plus button to right*/
 	#addplus {
-		float: right;
-	}
+		float: right; 
+		margin-bottom: 0px;}
+	  #cardname {
+		margin-top: 5px;
+		margin-bottom: 5px;}
+	  .pricetag {
+		display: inline;
+		margin-bottom: 0px;}
+	  .drink{
+		margin: 3px;
+		margin-bottom: 0px }  	
+	  .desc {
+		display: none;}
+	  .detailpic {
+		display: none;}
 
 	#pricetag {
 		display: inline;
@@ -36,7 +49,7 @@
 	}
 
 	.menucard {
-		margin: 10px 10px 50px 10px;
+		margin: 10px;
 		//box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 	}
 
@@ -45,8 +58,14 @@
 	}
 
 	.menucardcontainer {
-		padding:0 16px;
-		max-width: 210px;
+		padding: 0.01em 16px;
+    padding-bottom: 8px;
+    max-width: 210px;
+    background-color: grey; 
+    margin-top: -5px;
+   -webkit-filter: drop-shadow(5px 5px 5px #111);
+    filter: drop-shadow(5px 5px 5px #111); 
+    }
 
 		#cardname {
 			margin-bottom: 5px;
@@ -68,10 +87,11 @@
 		#kr {
 			color: $theme-sec-color;
 		}
-	}
+	
 
 	.select {
 		position: absolute;
+		cursor: pointer;
 	}
 
 	#sort {
@@ -120,7 +140,7 @@
 
 	.float-right {
 		position: absolute;
-		right: 0px;
+		right: 5px;
 		top: 10px;
 	}
 
@@ -328,7 +348,6 @@
 	.plussign {
 		cursor: pointer; 
 		background-color: transparent;
-		border: 1px solid #ccc;
 	}
 	.select {
 		cursor: pointer; 

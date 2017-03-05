@@ -8,6 +8,7 @@ $(document).ready(function() {
 	var id = 0;
 	//Create and populate cards for every item in the beer object array
 	for(var i = 0; i < beer.length; i++) {
+		//if(beer[i].gluten == false){
 		var values = beer[i];
 		$('#item-collection').append('<div class="menucard" id="card-item'+ id +'"> ' +
 				'<img src="' + beer[i].img +'" id="pic' + id + '" class="pic"> <div class="menucardcontainer">' +
@@ -17,6 +18,7 @@ $(document).ready(function() {
 				'<p class="desc" id="desc' + id + '">'+ beer[i].description +'</p> <p class="desc" id="country' + 
 				id + '">'+ beer[i].country +'</p> </div></div>');		
 		id++;
+		//}
 	};		
 	
 	getBeerDetails();
