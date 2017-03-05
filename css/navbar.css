@@ -47,7 +47,7 @@
 #navBar .right-tab-group {
   display: flex;
   position: absolute;
-  height: 10%;
+  height: 100%;
   right: 20px; }
 
 #navBar a {
