@@ -12,13 +12,17 @@
 </head>
 
 <body id="menu">
+	<!-- Navigation bar -->
 	<div id="navBar">
 	</div>
 
+	<!-- Login modal -->
 	<div id="modalLogin" class="modal">	
 	</div>
 
 	<br/>
+
+	<!-- Search bar -->
 	<div class="search-bar">
 		<div class="wrapper">
 			<input type="text" class="form-control search-control" placeholder="Search">
@@ -27,27 +31,35 @@
 	</div>
 	<br/>
 	
-	<div>
-	<select class="select" id="brand">
-	<option>Select Brand</option>
-	</select>
+	<!-- Detailed card modal -->
+	<div id="detailedMenuModal" class="modal">
 	</div>
 	
+	<!-- Brand selection dropdown menu -->
 	<div>
-	<select class="select" id="sort">
-	<option>Sort By</option>
-	<option>Name</option>
-	<option>Popularity</option>
-	<option>Price: Highest to Lowest</option>
-	<option>Price: Lowest to Highest</option>
-	<option>Alcohol Level</option>
-	<option>Gluten Free</option>
+	<select class="select" id="brand">
+		<option>Select Brand</option>
 	</select>
 	</div>
 
+	<!-- Sorting selection dropdown menu -->
+	<div>
+	<select class="select" id="sort">
+		<option>Sort By</option>
+		<option>Name</option>
+		<option>Popularity</option>
+		<option>Price: Highest to Lowest</option>
+		<option>Price: Lowest to Highest</option>
+		<option>Alcohol Level</option>
+		<option>Gluten Free</option>
+	</select>
+	</div>
+
+	<!-- content -->
 	<div>
 		<div class="row-wrapper">
 			<div class="bar-wrapper">
+				<!-- alcohol category bar -->
 				<div class="category-bar">
 					<div class="side-bar">
 						<div class="category-tab selected" id="beertab">
@@ -88,30 +100,14 @@
 						</div>
 					</div>
 				</div>
-
-				<!--<div class="side-bar">
-					<div class="brand-bar third-cate-band">
-						<p><a>Brand1</a></p>
-						<p><a>Brand2</a></p>
-						<p><a>Brand3</a></p>
-					</div>
-				</div>-->
 			</div>
 
+			<!-- Item collection grids -->
 			<div class="item-collection" id="item-collection">
 			
 			</div>
 			
-			<!--<div class="w3-card-8" id="card-item">
-  					<img src="" id="pic" class="pic">
- 					<div class="w3-container w3-grey">
- 					   <h4 id="cardname"><b>Name</b></h4> 
-    					<p id="pricetag">Price</p> <p id="kr">kr</p> 
-    					<i class="fa fa-plus" class="addplus" id="addplus" aria-hidden="true"></i>
-    					<p/>
-    				</div>
-			</div>-->
-			
+			<!-- item detailed popup 
 			<div class="col-sm-10 item-detailed row hidden" id="item-detailed">
 				<div class="detailed-card">
 					<div class="close-btn">
@@ -127,8 +123,9 @@
 						<button class="btn btn-default pull-right add-cart-btn" id="add" ><i class="fa fa-cart-plus" aria-hidden="true"></i>add to cart</button>
 					</div>
 				</div>
-			</div>
+			</div>-->
 
+			<!-- cart -->
 			<div id="cartPopup" class="cart-popup">
 
 			</div>
@@ -138,6 +135,7 @@
 <script src="js/order.js"></script>
 <script src="js/beverage.js"></script>
 <script src="js/menu.js"></script>
+<script src="js/detailedCard.js"></script>
 
 
 </body>

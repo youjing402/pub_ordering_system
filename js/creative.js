@@ -1,14 +1,12 @@
 $(document).ready(function() {
-    $('.item-card').click(function() {
-        $('#item-collection').addClass("hidden");
-        $('#item-detailed').removeClass("hidden");
-		
-		$('.drink-description').text(bear[0].description);
-		$('.drink-name').text(bear[0].name);
-    });
 
-     $('.close-btn').click(function() {
-        $('#item-collection').removeClass("hidden");
-        $('#item-detailed').addClass("hidden");
-    });
+	// load the navigation bar
+	$('#navBar').load("./navbar.html");
+
+	// load the login modal
+	$('#modalLogin').load("./modal_login.html");
+	
+	// load the detailed card modal
+	$('#detailedMenuModal').load("./detailedmenucard.html");
+
 });

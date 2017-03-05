@@ -1,0 +1,98 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {   
+    background-color: #383742;
+    color: #FFFFFF;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+	height: 350px;
+	box-shadow: 10px 10px 5px #333;
+	position: relative;
+}
+
+/* The Close Button */
+.closeModal {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#drink-name {
+	margin-bottom: 0;
+}
+
+.drink-img {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: -20px;
+	}
+
+.drink-info {
+	font-family: "Lato", sans-serif;
+}
+
+#drink-country{
+	margin:0;
+	padding:0;
+	display:inline;
+}
+
+#drink-loc {
+	margin: 0;
+	padding: 0;
+	display: none;
+}
+
+#drink-year {
+	margin: 0;
+	padding: 0;
+	display: none;
+}
+
+#drink-price {
+	color: #ffd446;
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+
+#drink-description {
+	color: #ccc;
+}
+
+#addToCartButton {
+	border-radius: 0;
+	border-color: #ffd446;
+	background-color: transparent;
+	font-size: 12pt;
+	color: #ffd446;
+	padding: 14px 10px;
+	margin-left: 250px;
+	border: 2px solid;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 20%;
+}    
