@@ -44,30 +44,26 @@
 	#addplus {
 		float: right; 
 		margin-bottom: 0px;}
-	  #cardname {
-		margin-top: 5px;
-		margin-bottom: 5px;}
-	  .pricetag {
-		display: inline;
-		margin-bottom: 0px;}
-	  .drink{
-		margin: 3px;
-		margin-bottom: 0px }  	
-	  .desc {
-		display: none;}
-	  .detailpic {
-		display: none;}
-
-	#pricetag {
-		display: inline;
-	}
-
-	#kr {
-		display: inline;
-	}
-
-	.menucard {
-		margin: 10px;
+		#cardname {
+			margin-top: 5px;
+			margin-bottom: 5px;}
+			.pricetag {
+				display: inline;
+				margin-bottom: 0px;
+				color: $theme-sec-color;
+			}
+			.drink{
+				margin: 3px;
+				margin-bottom: 0px 
+			}  	
+			.desc {
+				display: none;
+			}
+			.detailpic {
+				display: none;
+			}
+			.menucard {
+				margin: 10px 10px 50px 10px;
 		//box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 	}
 
@@ -77,34 +73,29 @@
 
 	.menucardcontainer {
 		padding: 0.01em 16px;
-    padding-bottom: 8px;
-    max-width: 210px;
-    background-color: grey; 
-    margin-top: -5px;
-   -webkit-filter: drop-shadow(5px 5px 5px #111);
-    filter: drop-shadow(5px 5px 5px #111); 
-    }
+		padding-bottom: 8px;
+		max-width: 210px;
+		margin-top: -5px;
+		-webkit-filter: drop-shadow(5px 5px 5px #111);
+		filter: drop-shadow(5px 5px 5px #111); 
+	}
 
-		#cardname {
-			margin-bottom: 5px;
-			margin-top: 2px;
-			color: white;
-			text-align: center;
-		}
+	#cardname {
+		margin-bottom: 5px;
+		margin-top: 2px;
+		color: white;
+		text-align: center;
+	}
 
-		#pricediv {
-			width: 100%;
-			text-align: center;
-			margin-bottom: 5px;
-		}
+	#pricediv {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 5px;
+	}
 
-		#pricetag {
-			color: $theme-sec-color;
-		}
-
-		#kr {
-			color: $theme-sec-color;
-		}
+	#kr {
+		color: $theme-sec-color;
+	}
 	
 
 	.select {

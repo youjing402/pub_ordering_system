@@ -213,7 +213,8 @@ button {
     margin-bottom: 5px; }
   #menu .pricetag {
     display: inline;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    color: #ffd446; }
   #menu .drink {
     margin: 3px;
     margin-bottom: 0px; }
@@ -221,17 +222,12 @@ button {
     display: none; }
   #menu .detailpic {
     display: none; }
-  #menu #pricetag {
-    display: inline; }
-  #menu #kr {
-    display: inline; }
   #menu .menucard {
-    margin: 10px; }
+    margin: 10px 10px 50px 10px; }
   #menu .menucardcontainer {
     padding: 0.01em 16px;
     padding-bottom: 8px;
     max-width: 210px;
-    background-color: grey;
     margin-top: -5px;
     -webkit-filter: drop-shadow(5px 5px 5px #111);
     filter: drop-shadow(5px 5px 5px #111); }
@@ -244,8 +240,6 @@ button {
     width: 100%;
     text-align: center;
     margin-bottom: 5px; }
-  #menu #pricetag {
-    color: #ffd446; }
   #menu #kr {
     color: #ffd446; }
   #menu .select {

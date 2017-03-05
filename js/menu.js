@@ -14,7 +14,7 @@ $(document).ready(function() {
 				'<img src="' + beer[i].img +'" id="pic' + id + '" class="pic"> <div class="menucardcontainer">' +
 				'<img src="'+ beer[i].detailimg +'" id="detailpic'+ id + '" class="detailpic">' + 
 				'<h4 class="drink" id="drink'+ id +'"><b>' + beer[i].name + '</b></h4> <p class="pricetag" id="pricetag' + id + '">'
-				 + beer[i].price + ' kr</p> <i class="fa fa-plus plussign" id="addplus" aria-hidden="true"></i>' +
+				 + beer[i].price + ' kr</p> <button class="plussign" id="addplus" aria-hidden="true">add</button>' +
 				'<p class="desc" id="desc' + id + '">'+ beer[i].description +'</p> <p class="desc" id="country' + 
 				id + '">'+ beer[i].country +'</p> </div></div>');		
 		id++;
