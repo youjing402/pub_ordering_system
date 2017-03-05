@@ -10,11 +10,17 @@ var order = 0;
 //Add element to cart from detailed view
 add.onclick = function(event) {
 	if(event.target == add) {
-		order += 1;
-		sq1.style.display = 'block';
-		a1.innerHTML = order;
-		menuModal.style.display = "none";
-		//TODO send json details about the beer to cart
+		if(order < 10) {
+			order += 1;
+			sq1.style.display = 'block';
+			a1.innerHTML = order;
+			menuModal.style.display = "none";
+			//TODO send json details about the beer to cart
+		}
+		else {
+			alert("Maximum drink limit had been reached");
+			menuModal.style.display = "none";
+		}
 	}
 }
 
@@ -22,10 +28,15 @@ add.onclick = function(event) {
 function addElementToCart(){
 	for(var i = 0, length = addplus.length; i < length; i++) {
 		addplus[i].onclick = function(event) {
+			if(order < 10) {
 				order += 1;
 				sq1.style.display = 'block';
 				a1.innerHTML = order;
 				//TODO send json details about the beer to cart
+			}
+			else {
+				alert("Maximum drink limit had been reached");
+			}
 		}
 	}
 }
