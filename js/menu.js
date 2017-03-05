@@ -48,8 +48,8 @@ $(document).ready(function() {
 			$('#item-collection').append('<div class="menucard" id="card-item"> <img src="' + wine[i].img +
 			'" id="pic' + wineId + '" class="pic"> <div class="menucardcontainer"> <img src="'+ wine[i].detailimg +
 			'" id="detailpic'+ wineId + '" class="detailpic"><h4 class="drink" id="drink' + wineId + '"><b>' + wine[i].name + 
-			'</b></h4> <p class="pricetag" id="pricetag' + wineId + '">' + wine[i].price + ' kr</p><i class="fa fa-plus plussign"' + 
-			'id="addplus" aria-hidden="true"></i> <p class="desc" id="desc' + wineId + '">'+ wine[i].description +'</p> '+
+			'</b></h4> <p class="pricetag" id="pricetag' + wineId + '">' + wine[i].price + ' kr</p><button class="plussign"' + 
+			'id="addplus" aria-hidden="true">add</button> <p class="desc" id="desc' + wineId + '">'+ wine[i].description +'</p> '+
 			' <p class="desc" id="country' + wineId + '">'+ wine[i].country +'</p> <p class="desc" id="loc' + wineId + '">'+ wine[i].location +'</p>' +
 			' <p class="desc" id="year' + wineId + '">'+ wine[i].year +'</p> </div></div>');
 			wineId++;
@@ -87,7 +87,7 @@ $(document).ready(function() {
 				'<img src="' + beer[i].img +'" id="pic' + id + '" class="pic"> <div class="menucardcontainer">' +
 				'<img src="'+ beer[i].detailimg +'" id="detailpic'+ id + '" class="detailpic">' + 
 				'<h4 class="drink" id="drink'+ id +'"><b>' + beer[i].name + '</b></h4> <p class="pricetag" id="pricetag' + id + '">'
-				 + beer[i].price + ' kr</p> <i class="fa fa-plus plussign" id="addplus" aria-hidden="true"></i>' +
+				 + beer[i].price + ' kr</p> <button class="plussign" id="addplus" aria-hidden="true">add</button>' +
 				'<p class="desc" id="desc' + id + '">'+ beer[i].description +'</p> <p class="desc" id="country' + 
 				id + '">'+ beer[i].country +'</p> </div></div>');		
 			id++;
