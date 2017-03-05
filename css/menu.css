@@ -196,7 +196,7 @@ button {
     color: white;
     font-size: 20pt; }
   #menu .form-control {
-    width: 100vw;
+    width: 100%;
     height: 34px;
     padding: 1px 10px;
     font-size: 14px;
