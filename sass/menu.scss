@@ -46,7 +46,7 @@
 		margin-bottom: 5px;
 	}
 	.pricetag {
-		margin-bottom: 5px;
+		margin-bottom: 8px;
 		margin-top: 5px;
 		color: $theme-sec-color;
 		text-align: center;
@@ -64,7 +64,15 @@
 		cursor: pointer; 
 		background-color: transparent;
 		border: 1px solid #ccc;
+		padding: 8px;
 	}
+
+	.plussign:hover {
+		outline: 1px solid $theme-sec-color;
+		outline-offset: 3px;
+		color: $theme-sec-color;
+	}
+
 
 	.desc {
 		display: none;
@@ -119,7 +127,7 @@
 	}
 
 	.dropdown:hover .dropdown-content {
-		//display: block;
+		display: block;
 	}
 
 	.select {

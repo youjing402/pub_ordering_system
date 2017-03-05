@@ -209,7 +209,7 @@ button {
     margin-top: 5px;
     margin-bottom: 5px; }
   #menu .pricetag {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     margin-top: 5px;
     color: #ffd446;
     text-align: center; }
@@ -223,7 +223,12 @@ button {
   #menu .plussign {
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid #ccc; }
+    border: 1px solid #ccc;
+    padding: 8px; }
+  #menu .plussign:hover {
+    outline: 1px solid #ffd446;
+    outline-offset: 3px;
+    color: #ffd446; }
   #menu .desc {
     display: none; }
   #menu .detailpic {
@@ -255,6 +260,8 @@ button {
     display: block; }
   #menu .dropdown-content a:hover {
     background-color: #ddd; }
+  #menu .dropdown:hover .dropdown-content {
+    display: block; }
   #menu .select {
     cursor: pointer; }
   #menu #sort {
@@ -312,7 +319,7 @@ button {
     #menu .category-tab .rectangle {
       width: 10em;
       height: 50px;
-      background-color: #2f2421;
+      background-color: black;
       display: flex;
       align-items: center;
       padding-left: 1em; }
@@ -334,7 +341,7 @@ button {
     height: 0;
     border-top: 25px solid transparent;
     border-bottom: 25px solid transparent;
-    border-left: 25px solid #2f2421; }
+    border-left: 25px solid black; }
   #menu .item-collection {
     display: flex;
     flex-wrap: wrap;
