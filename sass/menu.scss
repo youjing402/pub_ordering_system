@@ -5,24 +5,6 @@
 	margin: 0px;
 	background-color: #35373c;
 
-	.mobile-category-bar {
-		display: flex;
-		justify-content: space-around;
-
-		@media screen and (min-width: $mobile-break-point) {
-			display: none;
-		}
-	}
-
-	.mobile-dropdown-bar {
-		display: flex;
-		justify-content: space-around;
-
-		@media screen and (min-width: $mobile-break-point) {
-			display: none;
-		}
-	}
-
 	.tab {
 		color: white;
 		font-size: 20pt;
@@ -114,16 +96,10 @@
 
 	#sort {
 		margin-left: 900px;
-		@media screen and (max-width: $mobile-break-point) {
-			display: none;
-		}
 	}
 
 	#brand {
 		margin-left: 750px;
-		@media screen and (max-width: $mobile-break-point) {
-			display: none;
-		}
 	}
 
 	.card {
@@ -150,11 +126,6 @@
 		display: flex;
 		justify-content: space-between;
 		max-width: 82%;
-
-		@media screen and (max-width: $mobile-break-point) {
-			justify-content: center;
-			max-width: 100%;
-		}
 	}
 
 	.search-bar {
@@ -165,10 +136,6 @@
 			position: relative;
 		}
 
-		@media screen and (max-width: $mobile-break-point) {
-			width: 100vw;
-			margin: 0;
-		}
 	}
 
 	.float-right {
@@ -183,10 +150,6 @@
 
 	.category-bar {
 		padding-top: 30px;
-
-		@media screen and (max-width: $mobile-break-point) {
-			display: none;
-		}
 	}
 
 	.category-tab {
@@ -248,10 +211,6 @@
 		max-width: 700px;
 		margin-top: 30px;
 		margin-left: 30px;
-
-		@media screen and (max-width: $mobile-break-point) {
-			justify-content: center;
-		}
 	}
 
 	.item-card {
@@ -376,10 +335,6 @@
 	.cart-popup {
 		position: absolute;
 		right: 0px;
-
-		@media screen and (max-width: $mobile-break-point) {
-			display: none;
-		}
 	}
 	
 	.pic {
