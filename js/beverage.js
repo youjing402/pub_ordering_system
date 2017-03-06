@@ -10,7 +10,7 @@ var beer = [{
 				"volume": 330,
 				"price": 60,
 				"stock": 100,
-				"amountBought": 23
+				"amountBought": 22
 			},
 			{
 				"name": "Fonteinen",
