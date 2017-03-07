@@ -139,6 +139,7 @@
 		@media screen and (max-width: $mobile-break-point) {
 			display: flex;
 			justify-content: space-around;
+			margin-top: 60px;
 		}
 
 		#sort {
@@ -187,7 +188,10 @@
 		@media screen and (max-width: $mobile-break-point) {
 			justify-content: center;
 			max-width: 100%;
+			display: block;
 		}
+
+
 	}
 
 	.search-bar {
@@ -212,13 +216,18 @@
 
 	.side-bar {
 		padding-top: 20px;
+		@media screen and (max-width: $mobile-break-point) {
+			display: flex;
+		}
 	}
 
 	.category-bar {
 		padding-top: 30px;
-
 		@media screen and (max-width: $mobile-break-point) {
-			display: none;
+			padding-top: 0px;
+			position: absolute;
+			top: 100px;
+			width: 100%;
 		}
 	}
 
@@ -233,6 +242,18 @@
 			display: flex;
 			align-items: center;
 			padding-left: 1em;
+
+			@media screen and (max-width: $mobile-break-point) {
+				width: 100%;
+				text-align: center;
+				padding-left: 0px;
+
+				.tab {
+					width: 100%;
+					text-align: center;
+					font-size: 15px;
+				}
+			}
 
 			a {
 				font-size: 26px;
@@ -272,6 +293,10 @@
 		border-top: 25px solid transparent;
 		border-bottom: 25px solid transparent;
 		border-left: 25px solid $tab-color;
+
+		@media screen and (max-width: $mobile-break-point) {
+			display: none;
+		}
 	}
 
 	.item-collection {
@@ -288,7 +313,7 @@
 	}
 
 	.bar-wrapper {
-		display: flex;
+		
 	}
 
 	.brand-bar {
@@ -392,6 +417,10 @@
 
 	.category-tab {
 		cursor: pointer; 
+		@media screen and (max-width: $mobile-break-point) {
+			width: 50%;
+		}
+		
 	}
 
 	.select {
