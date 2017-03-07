@@ -10,7 +10,7 @@ var beer = [{
 				"volume": 330,
 				"price": 60,
 				"stock": 100,
-				"amount-bought": 0
+				"amountBought": 22
 			},
 			{
 				"name": "Fonteinen",
@@ -24,7 +24,7 @@ var beer = [{
 				"volume": 375,
 				"price": 120,
 				"stock": 70,
-				"amount-bought": 0
+				"amountBought": 4
 			},
 			{
 				"name": "Carlsberg Export",
@@ -38,7 +38,7 @@ var beer = [{
 				"volume": 500,
 				"price": 50,
 				"stock": 200,
-				"amount-bought": 0
+				"amountBought": 55
 			},
 			{
 				"name": "Mariestads",
@@ -52,7 +52,7 @@ var beer = [{
 				"volume" : 330,
 				"price" : 60,
 				"stock" : 40,
-				"amount-bought" : 0
+				"amountBought" : 35
 				
 			},
 			{
@@ -67,7 +67,7 @@ var beer = [{
 				"volume" : 330,
 				"price" : 65,
 				"stock" : 50,
-				"amount-bought" : 0
+				"amountBought" : 23
 			},
 			{
 				"name" : "Arboga",
@@ -81,7 +81,7 @@ var beer = [{
 				"volume" : 500,
 				"price" : 60,
 				"stock" : 100,
-				"amount-bought" : 0
+				"amountBought" : 19
 			},
 			{
 				"name" : "Saxon",
@@ -95,7 +95,7 @@ var beer = [{
 				"volume" : 500,
 				"price" : 70,
 				"stock" : 30,
-				"amount-bought" : 0
+				"amountBought" : 5
 			}
 			
 			
@@ -116,7 +116,7 @@ var wine = [{
 				"volume" : 750,
 				"price" : 250,
 				"stock" : 30,
-				"amount-bought" : 0
+				"amountBought" : 3
 			},
 			{
 				"name" : "Amarone",
@@ -132,7 +132,7 @@ var wine = [{
 				"volume" : 750,
 				"price" : 390,
 				"stock" : 30,
-				"amount-bought" : 0
+				"amountBought" : 5
 			},
 			{
 				"name" : "Biecher",
@@ -148,7 +148,7 @@ var wine = [{
 				"volume" : 750,
 				"price" : 150,
 				"stock" : 30,
-				"amount-bought" : 0
+				"amountBought" : 10
 			},
 			{
 				"name" : "Calvet",
@@ -164,14 +164,14 @@ var wine = [{
 				"volume" : 375,
 				"price" : 160,
 				"stock" : 50,
-				"amount-bought" : 0
+				"amountBought" : 4
 			},
 			{
 				"name" : "Chablis Premier Cru",
 				"country" : "France, Burgundy, ",
 				"location" : "Grande Cuv&eacute;e, ",
 				"year" : 2014,
-				"gluten" : false,
+				"gluten" : true,
 				"alcoholLevel" : 12.5,
 				"img": "images/chablis-square.png",
 				"detailimg": "images/wine-Chablis.jpg",
@@ -179,14 +179,14 @@ var wine = [{
 				"volume" : 750,
 				"price" : 280,
 				"stock" : 30,
-				"amount-bought" : 0
+				"amountBought" : 6
 			},
 			{
 				"name" : "Acusp",
 				"country" : "Spain, Costers del Segre, ",
 				"location" : "Castell D'Encus, ",
 				"year" : 2014,
-				"gluten" : false,
+				"gluten" : true,
 				"alcoholLevel" : 12.5,
 				"img" : "images/acusp-square.png",
 				"detailimg": "images/acusp.jpg",
@@ -195,7 +195,7 @@ var wine = [{
 				"volume" : 750,
 				"price" : 400,
 				"stock" : 20,
-				"amount-bought" : 0 
+				"amountBought" : 2 
 			}
 			
 				]

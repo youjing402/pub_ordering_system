@@ -268,7 +268,8 @@ button {
   @media screen and (max-width: 800px) {
     #menu .dropdown-grp {
       display: flex;
-      justify-content: space-around; } }
+      justify-content: space-around;
+      margin-top: 60px; } }
   @media screen and (min-width: 800px) {
     #menu .dropdown-grp #sort {
       position: absolute;
@@ -292,7 +293,8 @@ button {
     @media screen and (max-width: 800px) {
       #menu .row-wrapper {
         justify-content: center;
-        max-width: 100%; } }
+        max-width: 100%;
+        display: block; } }
   #menu .search-bar {
     width: 50%;
     margin-left: auto;
@@ -309,11 +311,17 @@ button {
     top: 10px; }
   #menu .side-bar {
     padding-top: 20px; }
+    @media screen and (max-width: 800px) {
+      #menu .side-bar {
+        display: flex; } }
   #menu .category-bar {
     padding-top: 30px; }
     @media screen and (max-width: 800px) {
       #menu .category-bar {
-        display: none; } }
+        padding-top: 0px;
+        position: absolute;
+        top: 100px;
+        width: 100%; } }
   #menu .category-tab {
     position: relative;
     margin-bottom: 10px; }
@@ -324,6 +332,15 @@ button {
       display: flex;
       align-items: center;
       padding-left: 1em; }
+      @media screen and (max-width: 800px) {
+        #menu .category-tab .rectangle {
+          width: 100%;
+          text-align: center;
+          padding-left: 0px; }
+          #menu .category-tab .rectangle .tab {
+            width: 100%;
+            text-align: center;
+            font-size: 15px; } }
       #menu .category-tab .rectangle a {
         font-size: 26px; }
   #menu .category-tab.selected .rectangle {
@@ -343,6 +360,9 @@ button {
     border-top: 25px solid transparent;
     border-bottom: 25px solid transparent;
     border-left: 25px solid black; }
+    @media screen and (max-width: 800px) {
+      #menu .arrow-right {
+        display: none; } }
   #menu .item-collection {
     display: flex;
     flex-wrap: wrap;
@@ -353,8 +373,6 @@ button {
     @media screen and (max-width: 800px) {
       #menu .item-collection {
         justify-content: center; } }
-  #menu .bar-wrapper {
-    display: flex; }
   #menu .brand-bar {
     padding-top: 20px;
     padding-left: 20px; }
@@ -418,6 +436,9 @@ button {
     filter: drop-shadow(5px 5px 5px #111); }
   #menu .category-tab {
     cursor: pointer; }
+    @media screen and (max-width: 800px) {
+      #menu .category-tab {
+        width: 50%; } }
   #menu .select {
     cursor: pointer; }
 
