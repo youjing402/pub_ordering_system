@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="css/cart_popup.css" rel="stylesheet">
-
-	<div class="title"> <span>My Order</span></div>
-<div class="cart-item square" id="square1">
-	<img src="http://www.newyorker.com/wp-content/uploads/2015/05/Stayner-The-Quest-to-Reproduce-the-Worlds-Oldest-Beer-936.jpg">
-	<div class="content">
-		<h4>beer1</h4>
-		<h5>50kr</h5>
-		<div class="amount"><i class="fa fa-minus" id="minus1" aria-hidden="true"></i><text id="a1">0</text><i class="fa fa-plus" id="plus1" aria-hidden="true"></i></div>
-	</div>
-</div>
-<div class="cart-item square" id="square2">
-	<img src="http://www.newyorker.com/wp-content/uploads/2015/05/Stayner-The-Quest-to-Reproduce-the-Worlds-Oldest-Beer-936.jpg">
-	<div class="content">
-		<h4>beer1</h4>
-		<h5>50kr</h5>
-		<div class="amount"><i class="fa fa-minus" id="minus2" aria-hidden="true"></i><text id="a2">0</text><i class="fa fa-plus" id="plus2" aria-hidden="true"></i></div>
-	</div>
-</div>
-
-<div class="btn-grp">
-	<button class="half-btn undo-btn">Undo</button>
-	<button class="half-btn redo-btn">Redo</button>
-</div>
+<head>
+	<link href="css/cart_popup.css" rel="stylesheet">
+	<script src="jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
+<head>
+<body>
+	<div class="title"> <span>My Order</span><span id="clearOrder">&times;</span></div>
+	<div class="subtitle"><span>Total</span><p id="orderTotal">0 kr</p> <span><button id="orderbtn">Order</button</span></div>
+	
+<!--	<div class="card-item square hidden" id="item13"></div>
+		<img src="http://www.newyorker.com/wp-content/uploads/2015/05/Stayner-The-Quest-to-Reproduce-the-Worlds-Oldest-Beer-936.jpg" id="orderimg">
+			<div class="content">
+				<p id="i1name"></p>
+				<p id="i1price">50</p>
+				<div class="amount"><i class="fa fa-minus" id="minus1" aria-hidden="true"></i><text id="a1">0</text><i class="fa fa-plus" id="plus1" aria-hidden="true"></i></div>
+			</div>
+	</div>-->
+	
+</body>
 
 <script src="js/order.js"></script>
+</html>
 
-<button>Order!</button>
 
 <!--TODO
 Need to make squares come up same way as beer pics in menu.js 
