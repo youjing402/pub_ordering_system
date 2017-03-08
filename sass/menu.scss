@@ -59,12 +59,12 @@
 		color: white;
 		text-align: center;
 	}  	
-
+	
 	.plussign {
-		cursor: pointer; 
-		background-color: transparent;
-		border: 1px solid #ccc;
-		padding: 8px;
+		cursor: pointer;
+		background-color: transparent; 
+		float: right;
+		margin-bottom: 0px;}
 	}
 
 	.plussign:hover {
@@ -422,7 +422,6 @@
 		}
 		
 	}
-
 	.select {
 		cursor: pointer; 
 	}

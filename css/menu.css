@@ -439,6 +439,11 @@ button {
     @media screen and (max-width: 800px) {
       #menu .category-tab {
         width: 50%; } }
+  #menu .plussign {
+    cursor: pointer;
+    background-color: transparent;
+    float: right;
+    margin-bottom: 0px; }
   #menu .select {
     cursor: pointer; }
 
