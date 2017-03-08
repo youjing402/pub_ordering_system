@@ -64,7 +64,7 @@
 		cursor: pointer;
 		background-color: transparent; 
 		float: right;
-		margin-bottom: 0px;}
+		margin-bottom: 0px;
 	}
 
 	.plussign:hover {
@@ -190,8 +190,6 @@
 			max-width: 100%;
 			display: block;
 		}
-
-
 	}
 
 	.search-bar {
@@ -425,9 +423,6 @@
 	.select {
 		cursor: pointer; 
 	}
-
 }
-
-
 
 @import 'sass/login.scss';

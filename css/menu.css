@@ -223,8 +223,8 @@ button {
   #menu .plussign {
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid #ccc;
-    padding: 8px; }
+    float: right;
+    margin-bottom: 0px; }
   #menu .plussign:hover {
     outline: 1px solid #ffd446;
     outline-offset: 3px;
@@ -439,11 +439,6 @@ button {
     @media screen and (max-width: 800px) {
       #menu .category-tab {
         width: 50%; } }
-  #menu .plussign {
-    cursor: pointer;
-    background-color: transparent;
-    float: right;
-    margin-bottom: 0px; }
   #menu .select {
     cursor: pointer; }
 
