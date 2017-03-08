@@ -494,13 +494,14 @@ function addItemOnClick(imgsrc, drinkname, price) {
 
 /* Display the information of selected item in My Order */
 function writeOrderItem(imgsrc, drinkname, price) {
-	$('#cartPopup').append('<div class="card-item square" id="item'+ counter +'"> ' + 
+	var item = '<div class="card-item square" id="item'+ counter +'"> ' + 
 		'<img src="' + imgsrc + '" id="orderimg'+ counter +'" class="orderimg">' + '<div class="content">' +  
 		'<p class="i1name" id="i1name'+ counter +'">' + drinkname + '</p><p id="i1price'+ counter +'" class="i1price">' + price + 
 		'</p> <div class="amount"><i class="fa fa-minus cart" id="minus'+ counter +'"' +
 		'aria-hidden="true"> </i><text id="a'+ counter +'">1</text> <i class="fa fa-plus cart"' +
-		'id="plus'+ counter +'" aria-hidden="true"></i> </div></div></div>');
-				
+		'id="plus'+ counter +'" aria-hidden="true"></i> </div></div></div>';
+	//$('#cartPopup').append();
+	$(item).insertAfter("#cartTitle");		
 		counter++;
 }
 
