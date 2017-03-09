@@ -20,7 +20,10 @@
   padding-left: 20px; }
   @media screen and (max-width: 800px) {
     #navBar .navbar {
-      margin-bottom: 0; } }
+      margin-bottom: 0;
+      position: fixed;
+      z-index: 100;
+      width: 100%; } }
 
 #navBar .brand {
   font-size: 18px;

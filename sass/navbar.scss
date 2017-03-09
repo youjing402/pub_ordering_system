@@ -17,6 +17,9 @@
 
 		@media screen and (max-width: $mobile-break-point) {
 			margin-bottom: 0;
+			position: fixed;
+			z-index: 100;
+			width: 100%;
 		}
 	}
 
