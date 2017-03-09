@@ -182,7 +182,7 @@
 	.row-wrapper {
 		display: flex;
 		justify-content: space-between;
-		max-width: 82%;
+		max-width: 100%;
 		margin-top: 20px;
 
 		@media screen and (max-width: $mobile-break-point) {
