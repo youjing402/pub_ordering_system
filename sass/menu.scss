@@ -401,7 +401,7 @@
 	}
 
 	.cart-popup {
-		position: absolute;
+		position: fixed;
 		right: 0px;
 
 		@media screen and (max-width: $mobile-break-point) {
