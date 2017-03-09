@@ -403,7 +403,8 @@
 		right: 0px;
 
 		@media screen and (max-width: $mobile-break-point) {
-			display: none;
+			//display: none;
+			top: -10px;
 		}
 	}
 	

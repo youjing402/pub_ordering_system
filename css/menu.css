@@ -429,7 +429,7 @@ button {
     right: 0px; }
     @media screen and (max-width: 800px) {
       #menu .cart-popup {
-        display: none; } }
+        top: -10px; } }
   #menu .pic {
     cursor: pointer;
     -webkit-filter: drop-shadow(5px 5px 5px #111);

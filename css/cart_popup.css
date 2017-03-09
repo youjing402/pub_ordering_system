@@ -3,6 +3,8 @@
  * Copyright 2016 - UIP Team
  * Licensed under MIT (https://github.com/FitMi/FitMi-landing/blob/master/LICENSE)
  */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url("https://fonts.googleapis.com/css?family=Lobster|Pacifico|Lato");
 #cartPopup {
   margin-top: 40px;
   padding-top: 20px;
@@ -10,6 +12,10 @@
   background-color: transparent;
   min-width: 15%;
   height: 100%; }
+
+@media screen and (max-width: 800px) {
+  .cart-mobile-hidden {
+    display: none; } }
 
 .title {
   display: flex;
@@ -73,7 +79,8 @@
   text-align: left;
   margin-left: 10px;
   padding: 0px;
-  position: relative; }
+  position: relative;
+  width: 100%; }
 
 .content .amount {
   margin-bottom: 0px;
