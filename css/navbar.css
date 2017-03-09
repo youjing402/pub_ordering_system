@@ -100,3 +100,9 @@
   height: 34px;
   width: 268px;
   outline: none; }
+
+#navBar #navMenuBtn {
+  margin-right: 10px; }
+
+#navBar #navCartBtn {
+  margin-right: 10px; }
