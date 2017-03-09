@@ -33,6 +33,23 @@
   align-items: center;
   padding-left: 10px;
   padding-right: 10px; }
+  @media screen and (max-width: 800px) {
+    #navBar .navtab {
+      display: none; } }
+
+#navBar .navtab-mobile {
+  display: flex;
+  align-items: center; }
+  @media screen and (min-width: 800px) {
+    #navBar .navtab-mobile {
+      display: none; } }
+
+#navBar .mobile-menu {
+  position: absolute;
+  z-index: 100;
+  background-color: grey;
+  width: 100%;
+  color: grey; }
 
 #navBar .navtab.active {
   background-color: #aaa; }

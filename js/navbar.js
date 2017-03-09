@@ -15,3 +15,11 @@ function activateTab() {
 	navbar.find('.navtab').removeClass("active");
 	navbar.find('#navtab-' + currentTab).addClass("active");
 }
+
+$('#navMenuBtn').click(function() {
+	if ($('#mobileMenu').hasClass('hidden')) {
+		$('#mobileMenu').removeClass('hidden');
+	} else {
+		$('#mobileMenu').addClass('hidden');
+	}
+});

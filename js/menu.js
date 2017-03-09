@@ -9,6 +9,8 @@ $(document).ready(function() {
 	$('#modalLogin').load("./modal_login.html");
 	$('#cartPopup').load("./cart_popup.html");
 	$('#detailedMenuModal').load("./detailedmenucard.html");
+	//alert("aaa");
+	
 	
 	createBeerCollection();			
 	getBeerDetails();			//Gets detailed information for modal

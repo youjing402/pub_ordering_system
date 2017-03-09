@@ -32,6 +32,31 @@
 		align-items: center;
 		padding-left: 10px;
 		padding-right: 10px;
+
+		@media screen and (max-width: $mobile-break-point) {
+			display: none;
+		}
+	}
+
+	.navtab-mobile {
+		@media screen and (min-width: $mobile-break-point) {
+			display: none;
+		}
+		display: flex;
+		align-items: center;
+	}
+
+	.mobile-menu {
+		//display: none;
+		position: absolute;
+		z-index: 100;
+		background-color: grey;
+		width: 100%;
+		color: grey;
+	}
+
+	#mobileMenu {
+		//display: none;
 	}
 
 	.navtab.active {
