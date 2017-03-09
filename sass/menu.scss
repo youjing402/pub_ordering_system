@@ -113,7 +113,7 @@
 		background-color: #f9f9f9;
 		width: 14em;
 		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		z-index: 1;
+		z-index: 102;
 	}
 
 	.dropdown-content a {
@@ -403,6 +403,7 @@
 	.cart-popup {
 		position: fixed;
 		right: 0px;
+		width: 15%;
 
 		@media screen and (max-width: $mobile-break-point) {
 			//display: none;
@@ -414,6 +415,7 @@
 		cursor: pointer; 
 		-webkit-filter: drop-shadow(5px 5px 5px #111);
 		filter: drop-shadow(5px 5px 5px #111);
+		z-index: 101;
 	}
 
 	.category-tab {

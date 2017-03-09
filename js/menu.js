@@ -665,6 +665,9 @@ function operatorButtons() {
 				totalOrder -= priceParse;
 				$('#orderTotal').text(totalOrder + ' ');
 				counter--;
+				if (counter <= 0) {
+					$('.cart-placeholder').removeClass("hidden");
+				}
 			}
 		}
 	}
@@ -692,6 +695,7 @@ function writeOrderItem(imgsrc, drinkname, price) {
 	//$('#cartPopup').append();
 	$(item).insertAfter("#cartTitle");		
 		counter++;
+		$('.cart-placeholder').addClass("hidden");
 }
 
 

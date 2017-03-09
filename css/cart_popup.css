@@ -17,6 +17,15 @@
   .cart-mobile-hidden {
     display: none; } }
 
+.cart-placeholder {
+  max-width: 100%;
+  font-size: 12px;
+  background-color: #222;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .cart-placeholder p {
+    margin: 0; }
+
 .title {
   display: flex;
   justify-content: center;
