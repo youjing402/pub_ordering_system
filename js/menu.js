@@ -224,6 +224,7 @@ $(document).ready(function() {
 	
 	
 	$('#sortPHTL').click(function(){
+		var language = sessionStorage.getItem('key');
 		$('#item-collection').empty();
 		if($('#beertab').hasClass("selected")) {
 			if(language == null) {
@@ -256,6 +257,7 @@ $(document).ready(function() {
 	});
 	
 	$('#sortPLTH').click(function(){
+		var language = sessionStorage.getItem('key');
 		$('#item-collection').empty();
 		if($('#beertab').hasClass("selected")) {
 			if(language == null) {
@@ -288,6 +290,7 @@ $(document).ready(function() {
 	});
 	
 	$('#sortAlcoholLevel').click(function(){
+		var language = sessionStorage.getItem('key');
 		$('#item-collection').empty();
 		if($('#beertab').hasClass("selected")) {
 			if(language == null) {
@@ -321,8 +324,8 @@ $(document).ready(function() {
 	});
 	
 	$('#sortGlutenFree').click(function(){
+		var language = sessionStorage.getItem('key');
 		$('#item-collection').empty();
-		//check which is checked. beer or wine
 		if($('#beertab').hasClass("selected")) {
 			if(language == null) {
 				glutenFreeBeer(); //Selects the glutenfree beer, and shows them at the screen
@@ -331,6 +334,7 @@ $(document).ready(function() {
 				glutenFreeBeer(); //Selects the glutenfree beer, and shows them at the screen
 			}
 			else if(language == "sv") {
+			console.log(language);
 				glutenFreeSvBeer(); //Selects the glutenfree beer, and shows them at the screen
 			}
 			imageClick();
