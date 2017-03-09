@@ -424,7 +424,8 @@ button {
   #menu .cart-popup {
     position: fixed;
     right: 0px;
-    width: 15%; }
+    width: 15%;
+    z-index: -1; }
     @media screen and (max-width: 800px) {
       #menu .cart-popup {
         top: -10px; } }
@@ -432,7 +433,7 @@ button {
     cursor: pointer;
     -webkit-filter: drop-shadow(5px 5px 5px #111);
     filter: drop-shadow(5px 5px 5px #111);
-    z-index: 101; }
+    z-index: 0; }
   #menu .category-tab {
     cursor: pointer; }
     @media screen and (max-width: 800px) {
