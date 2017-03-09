@@ -273,10 +273,6 @@ button {
   @media screen and (min-width: 800px) {
     #menu .dropdown-grp #sort {
       position: absolute;
-      right: 220px; } }
-  @media screen and (min-width: 800px) {
-    #menu .dropdown-grp #brand {
-      position: absolute;
       right: 420px; } }
   #menu .card {
     /* Add shadows to create the "card" effect */
