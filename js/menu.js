@@ -304,7 +304,6 @@ function createWineCollection() {
 	//These elements provide information for wine items only
 		document.getElementById('drink-loc').style.display = "inline";
 		document.getElementById('drink-year').style.display = "inline";
-		nameSort(beer);
 		var language = sessionStorage.getItem('key');
 		if(language == null) {
 			for(var i = 0; i < wine.length; i++) {
