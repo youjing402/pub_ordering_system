@@ -355,9 +355,11 @@ function getWineDetails() {
 
 /* This function adds the item the user clicks on the the user's order */
 function updateOrder(imgsrc, drinkname, price) {
+	var IDonBeverage;
 	if(counter < 15) {
 		menuModal.style.display = "none";
-		addToOrder(imgsrc, drinkname, price);
+		IDonBeverage = addToOrder(imgsrc, drinkname, price);
+		return IDonBeverage;
 	}
 	else {
 		alert("Maximum drink limit had been reached");
@@ -383,11 +385,13 @@ function addToOrder(imgsrc, drinkname, price) {
 			totalOrder = 0;
 			//counter = 0;
 		});*/
-		
+	
+	var IDonBeverage;
 	var itemExists = false;
 	var itemId;
 	for(i = 0; i < counter; i++) {
 		if(document.getElementById('i1name'+i).innerHTML == drinkname) {
+			console.log("COUNTER: " + counter + " gjorde så att vi kom in");
 			itemId = i;
 			itemExists = true;
 			break;
@@ -398,10 +402,11 @@ function addToOrder(imgsrc, drinkname, price) {
 		totalOrder = t;
 		writeOrderItem(imgsrc, drinkname, price);
 			for(i = 0; i < counter; i++) {
-				operatorButtons();
+			IDonBeverage = operatorButtons();
 			}
 	}
 	else {	
+		console.log("Kommer vi hit i addToOrder?");
 		var item = document.getElementById('item'+i);
 		var amount = document.getElementById('a'+i);
 		var amountVal = parseInt(document.getElementById('a'+i).innerHTML);
@@ -427,6 +432,7 @@ function addToOrder(imgsrc, drinkname, price) {
 		console.log(item);
 		
 	}	
+	return IDonBeverage;
 }
 
 
@@ -479,6 +485,7 @@ function operatorButtons() {
 			}
 		}
 	}
+	return i;
 }
 
 
@@ -500,7 +507,7 @@ function writeOrderItem(imgsrc, drinkname, price) {
 		'</p> <div class="amount"><i class="fa fa-minus cart" id="minus'+ counter +'"' +
 		'aria-hidden="true"> </i><text id="a'+ counter +'">1</text> <i class="fa fa-plus cart"' +
 		'id="plus'+ counter +'" aria-hidden="true"></i> </div></div></div>');
-				
+				console.log("COUNTER ID i writeOrderItem (counter++ efter detta)" + counter);
 		counter++;
 }
 
@@ -510,6 +517,7 @@ function writeOrderItem(imgsrc, drinkname, price) {
 function beerPlusButton() {
 	$('.plussign').click(function(event) {
 		var eventId = event.target.id;
+		var IDonBeverage;
 		for(var i = 0; i < beer.length; i++) {
 			if(eventId == 'addplus' + i) {
 				var imgsrc = document.getElementById('drink-img').src = document.getElementById('detailpic' + i).src;
@@ -517,7 +525,8 @@ function beerPlusButton() {
 				var price = document.getElementById('drink-price').innerHTML = document.getElementById('pricetag' + i).innerHTML;
 				document.getElementById('drink-country').innerHTML = document.getElementById('country' + i).innerHTML;
 				document.getElementById('drink-description').innerHTML = document.getElementById('desc' + i).innerHTML;
-				updateOrder(imgsrc, drinkname, price);
+				IDonBeverage = updateOrder(imgsrc, drinkname, price);
+				UndoRedoObject.execute(imgsrc, drinkname, price,IDonBeverage);
 			}
 		}		
 	});
@@ -541,6 +550,16 @@ function winePlusButton() {
 		});
 }
 
+$("#undobtn").click(function(){
+      UndoRedoObject.undo();
+	  console.log("UndoRedoObject.undo");
+   });
+   
+   
+$("#redobtn").click(function(){
+      UndoRedoObject.redo();
+	  console.log("UndoRedoObject.redo");
+   });
 /* This function allows each item to be dragged into My Order with relevant details */
 function makeDraggable() {
 		$('.cart-popup').droppable({
@@ -683,3 +702,117 @@ function glutenFreeWine(){
 		makeDraggable();
 	}
 }
+
+/** THE OBJECT DECLARATION **/
+
+/** På rad 553 och 559 används detta objekt **/
+
+var UndoRedoObject = (function() {
+	
+//I needed to write this, otherwise I couldnt define commands to UndoRedoObject
+  function UndoRedoObject() {}
+	
+//Create two lists that will contain changes by the user.
+	UndoRedoObject.unexecuted = [];
+	UndoRedoObject.executed = [];
+  
+
+/*Till Lars: "Här nedanför skapar jag ett JSON objekt med information som behövs för att lägga till en dryck i order (funktionen addToOrder de tre första värdena). Jag har också med IDonBeverage som är ett id som 
+identifierar vilken position en specifik dryck är på i order-listan, olika objekt kan ha samma IDonBeverage värde"*/
+
+  UndoRedoObject.execute = function execute(imgsrc, drinkname, price, IDonBeverage) {
+	
+	var itemInformation = {
+		"imgsrc" : imgsrc,
+		"drinkname" : drinkname,
+		"price" : price,
+		"IDonBeverage" : IDonBeverage
+	} 
+	
+	//Till Lars: "Här lägger jag till objektet i arrayen"
+    UndoRedoObject.executed.push(itemInformation);
+	console.log("UndoRedoObject.executed[0].imgsrc: " + UndoRedoObject.executed[0].imgsrc);
+  };
+  
+  
+  /*Undo*/
+  
+  UndoRedoObject.undo = function undo() {
+	  
+	  console.log("UndoRedoObject.executed.length " + UndoRedoObject.executed.length);
+	  var arrayLengthAtBegining = UndoRedoObject.executed.length;
+	  for(var i = 0; i < arrayLengthAtBegining; i++){
+		  
+		  if(UndoRedoObject.executed[0] == undefined){
+					continue;
+				}
+		  /*Till Lars: Jag tar id på det första elementet, som kommer att förändras efter loopen här nedanför då den raderas */
+			var id = UndoRedoObject.executed[0].IDonBeverage;
+			
+			for(var j = 0; j < UndoRedoObject.executed.length; j++ ){
+				
+				if(UndoRedoObject.executed[j] == undefined){
+					continue;
+				}
+				/*Tar bort de JSON objekt med id matchande det id som blev uttagen här ovan. Här kopieras JSON objektet till 
+				unexecuted-array:en. Med hjälp av id:t ska också varje JSON objekt få ett "minus"-klick */
+				if(id == UndoRedoObject.executed[j].IDonBeverage){
+					UndoRedoObject.unexecuted.push(UndoRedoObject.executed[j])
+					UndoRedoObject.executed.splice(j,1);
+			
+					$('#minus' + id).click();	
+				}
+			}
+			 
+	  }
+		  
+	}
+	
+ /*REDO*/
+  
+  UndoRedoObject.redo = function redo() {
+	  
+	  console.log("UndoRedoObject.unexecuted.length" + UndoRedoObject.unexecuted.length);
+	  
+
+	  
+	 var arrayLength = UndoRedoObject.unexecuted.length;
+	 for(var i = 0; i < arrayLength; i++){
+		 
+		 if(UndoRedoObject.unexecuted[0] == undefined){
+			 continue;
+		 }
+		 
+		 var id = UndoRedoObject.unexecuted[0].IDonBeverage;
+		 /*Här läggs JSON-objektet tillbaka i order-listan. Här borde det skapas med fungerande knappar, men det gör det inte...*/
+		 addToOrder(UndoRedoObject.unexecuted[0].imgsrc,UndoRedoObject.unexecuted[0].drinkname, UndoRedoObject.unexecuted[0].price);
+		 
+		 
+		 for(var j = 0; j < UndoRedoObject.unexecuted.lenght; j++){
+			 if(UndoRedoObject.unexecuted[j] == undefined){
+				 continue;
+			 }
+			 /*Pga att addToOrder inte gör det jag vill att den ska göra, så funkar inte "$('#plus' + id).click();" så bra.
+			 Meningen med nedstående rad är att hitta objekt med rätt id och klicka på plus en gång för varje objekt.
+			 */
+			 if(id == UndoRedoObject.unexecuted[j].IDonBeverage){
+				 
+				UndoRedoObject.executed.push(UndoRedoObject.executed[j])
+				UndoRedoObject.unexecuted.splice(j,1);
+				$('#plus' + id).click();
+				 
+			 }
+			 
+			 
+		 }
+
+	 }
+	 
+	 
+   
+  };
+  
+  return UndoRedoObject;
+})();
+
+
