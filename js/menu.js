@@ -155,14 +155,32 @@ $(document).ready(function() {
 	
 	$('#sortName').click(function(){
 		$('#item-collection').empty();
+		var language = sessionStorage.getItem('key');
 		if($('#beertab').hasClass("selected")) {
-			nameSort(beer); 	//Sort by name
+		console.log(language);
+			if(language == null) {
+				nameSort(beer);	//Sort alphabetically
+			}
+			if(language == "en") {
+				nameSort(beer);	
+			}
+			else if(language == "sv") {
+				nameSort(svBeer);
+			}
 			createBeerCollection();	//Show all the beer items in beer array
 			imageClick();			//Detailed view when user clicks on image
 			getBeerDetails(); 	//Gets detailed information for modal
 		}		
 		else if($('#winetab').hasClass("selected")) {
-			nameSort(wine);
+			if(language == null) {
+				nameSort(wine);	//Sort alphabetically
+			}
+			if(language == "en") {
+				nameSort(wine);	//Sort by most bought
+			}
+			else if(language == "sv") {
+				nameSort(svWine);
+			}
 			createWineCollection();    //Shows the wine items
 			imageClick();		//Detailed view when user clicks on image
 			getWineDetails(); 	//Gets detailed information for modal
@@ -171,15 +189,32 @@ $(document).ready(function() {
 	});
 	
 	$('#sortPopularity').click(function(){
+	var language = sessionStorage.getItem('key');
 		$('#item-collection').empty();
 		if($('#beertab').hasClass("selected")) {
-			popularSort(beer);	//Sort by most bought
+			if(language == null) {
+				popularSort(beer);	//Sort by most bought
+			}
+			if(language == "en") {
+				popularSort(beer);	//Sort by most bought
+			}
+			else if(language == "sv") {
+				popularSort(svBeer);
+			}
 			createBeerCollection();	//Show all the beer items in beer array
 			imageClick();			//Detailed view when user clicks on image
 			getBeerDetails();	//Gets detailed information for modal
 		}
 		else if($('#winetab').hasClass("selected")) {	
-			popularSort(wine);	//Sort by most bought
+			if(language == null) {
+				popularSort(wine);	//Sort by most bought
+			}
+			if(language == "en") {
+				popularSort(wine);	//Sort by most bought
+			}
+			else if(language == "sv") {
+				popularSort(svWine);
+			}//Sort by most bought
 			createWineCollection();    //Shows the wine items
 			imageClick();		//Detailed view when user clicks on image
 			getWineDetails(); 	//Gets detailed information for modal
@@ -191,13 +226,29 @@ $(document).ready(function() {
 	$('#sortPHTL').click(function(){
 		$('#item-collection').empty();
 		if($('#beertab').hasClass("selected")) {
-			priceSortHighTop(beer); //sort by price, from highest to lowest
+			if(language == null) {
+				priceSortHighTop(beer);	//sort by price, from highest to lowest
+			}
+			if(language == "en") {
+				priceSortHighTop(beer); //sort by price, from highest to lowest
+			}
+			else if(language == "sv") {
+				priceSortHighTop(svBeer); //sort by price, from highest to lowest
+			}
 			createBeerCollection();		//Show all the beer items in beer array
 			imageClick();			//Detailed view when user clicks on image
 			getBeerDetails(); 		//Gets detailed information for modal
 		}
 		else if($('#winetab').hasClass("selected")) {
-			priceSortHighTop(wine); //sort by price, from highest to lowest
+			if(language == null) {
+				priceSortHighTop(wine);	//sort by price, from highest to lowest
+			}
+			if(language == "en") {
+				priceSortHighTop(wine); //sort by price, from highest to lowest
+			}
+			else if(language == "sv") {
+				priceSortHighTop(svWine); //sort by price, from highest to lowest
+			}
 			createWineCollection();    	//Shows the wine items
 			imageClick();			//Detailed view when user clicks on image
 			getWineDetails(); 		//Gets detailed information for modal
@@ -207,13 +258,29 @@ $(document).ready(function() {
 	$('#sortPLTH').click(function(){
 		$('#item-collection').empty();
 		if($('#beertab').hasClass("selected")) {
-			priceSortLowTop(beer);	//Sort by price, from lowest to highest
+			if(language == null) {
+				priceSortLowTop(beer);	//Sort by price, from lowest to highest
+			}
+			if(language == "en") {
+				priceSortLowTop(beer);	//Sort by price, from lowest to highest
+			}
+			else if(language == "sv") {
+				priceSortLowTop(svBeer);	//Sort by price, from lowest to highest
+			}
 			createBeerCollection();		//Show all the beer items in beer array
 			imageClick();			//Detailed view when user clicks on image
 			getBeerDetails(); 		//Gets detailed information for modal
 		}
 		else if($('#winetab').hasClass("selected")) {
-			priceSortLowTop(wine);	//Sort by price, from lowest to highest
+			if(language == null) {
+				priceSortLowTop(wine);	//Sort by price, from lowest to highest
+			}
+			if(language == "en") {
+				priceSortLowTop(wine);	//Sort by price, from lowest to highest
+			}
+			else if(language == "sv") {
+				priceSortLowTop(svWine);	//Sort by price, from lowest to highest
+			}
 			createWineCollection();    	//Shows the wine items
 			imageClick();			//Detailed view when user clicks on image
 			getWineDetails(); 		//Gets detailed information for modal
@@ -223,13 +290,29 @@ $(document).ready(function() {
 	$('#sortAlcoholLevel').click(function(){
 		$('#item-collection').empty();
 		if($('#beertab').hasClass("selected")) {
-			alcoholSort(beer);	//Sort by alcohol level
+			if(language == null) {
+				alcoholSort(beer);	//Sort by alcohol level
+			}
+			if(language == "en") {
+				alcoholSort(beer);	//Sort by alcohol level
+			}
+			else if(language == "sv") {
+				alcoholSort(svBeer);	//Sort by alcohol level
+			}
 			createBeerCollection();	//Show all the beer items in beer array
 			getBeerDetails(); 	//Gets detailed information for modal
 			imageClick();		//Detailed view when user clicks on image
 		}
 		else if($('#winetab').hasClass("selected")) {			
-			alcoholSort(wine);	//Sort by alcohol level
+			if(language == null) {
+				alcoholSort(wine);	//Sort by alcohol level
+			}
+			if(language == "en") {
+				alcoholSort(wine);	//Sort by alcohol level
+			}
+			else if(language == "sv") {
+				alcoholSort(svWine);	//Sort by alcohol level
+			}
 			createWineCollection();    //Shows the wine items
 			imageClick();		//Detailed view when user clicks on image
 			getWineDetails(); 	//Gets detailed information for modal
@@ -241,13 +324,29 @@ $(document).ready(function() {
 		$('#item-collection').empty();
 		//check which is checked. beer or wine
 		if($('#beertab').hasClass("selected")) {
-			glutenFreeBeer(); //Selects the glutenfree beer, and shows them at the screen
+			if(language == null) {
+				glutenFreeBeer(); //Selects the glutenfree beer, and shows them at the screen
+			}
+			if(language == "en") {
+				glutenFreeBeer(); //Selects the glutenfree beer, and shows them at the screen
+			}
+			else if(language == "sv") {
+				glutenFreeSvBeer(); //Selects the glutenfree beer, and shows them at the screen
+			}
 			imageClick();
 			getBeerDetails();
 			beerPlusButton();
 		}
 		else if($('#winetab').hasClass("selected")) {
-			glutenFreeWine(); //Selects the glutenfree wine, and shows them at the screen
+			if(language == null) {
+				glutenFreeWine(); //Selects the glutenfree beer, and shows them at the screen
+			}
+			if(language == "en") {
+				glutenFreeWine(); //Selects the glutenfree beer, and shows them at the screen
+			}
+			else if(language == "sv") {
+				glutenFreeSvWine(); //Selects the glutenfree beer, and shows them at the screen
+			}
 			imageClick();
 			getWineDetails();
 			winePlusButton();
@@ -441,6 +540,11 @@ function updateOrder(imgsrc, drinkname, price) {
 	if(counter < 15) {
 		menuModal.style.display = "none";
 		addToOrder(imgsrc, drinkname, price);
+		var num = price.replace(' kr','');
+		var numParse = parseInt(num);
+		totalOrder += numParse;
+		$('#orderTotal').text(totalOrder + ' ');
+			console.log(totalOrder);
 	}
 	else {
 		alert("Maximum drink limit had been reached");
@@ -478,7 +582,7 @@ function addToOrder(imgsrc, drinkname, price) {
 	}
 	if(!itemExists) {
 		var t = price.replace(' kr','');
-		totalOrder = t;
+		//totalOrder = t;
 		writeOrderItem(imgsrc, drinkname, price);
 			for(i = 0; i < counter; i++) {
 				operatorButtons();
@@ -502,7 +606,6 @@ function addToOrder(imgsrc, drinkname, price) {
 			var priceKr = total + (' kr');
 			amount.innerHTML = amountVal;
 			i1price.innerHTML = priceKr;
-			totalOrder += numParse;
 		}
 		else {
 			alert("Maximum drink limit had been reached");
@@ -529,7 +632,7 @@ function operatorButtons() {
 	var priceParse = parseInt(priceNo);
 	var keepPriceForMinus = priceParse;
 	var total = priceParse;
-	totalOrder = priceParse;
+	//totalOrder = priceParse;
 
 	plus.onclick = function(event) {
 		if(event.target == plus) {
@@ -545,6 +648,7 @@ function operatorButtons() {
 			}
 		}
 	}
+	//Fix this!
 	minus.onclick = function(event) {
 		if(event.target == minus) {
 			if(amountVal > 1) {
@@ -554,10 +658,12 @@ function operatorButtons() {
 				amount.innerHTML = amountVal;
 				i1price.innerHTML = priceKr;
 				totalOrder -= priceParse;
+				$('#orderTotal').text(totalOrder + ' ');
 			}
 			else {
 				item.style.display = 'none';
 				totalOrder -= priceParse;
+				$('#orderTotal').text(totalOrder + ' ');
 				counter--;
 			}
 		}
@@ -732,6 +838,38 @@ function glutenFreeBeer(){
 	}
 }
 
+/* Shows gluten free beer in Swedish */
+function glutenFreeSvBeer(){
+	var glutenFreeArray = [];
+	for(var i = 0; i < svBeer.length; i++){
+		if(svBeer[i].gluten == false){
+			glutenFreeArray.push(svBeer[i]);
+		}
+	}
+	
+	nameSort(glutenFreeArray);
+	var id = 0;
+	for(var i = 0; i < glutenFreeArray.length; i++){
+				$('#item-collection').append('<div class="menucard" id="card-item'+ id +'"> ' +
+						'<img src="' + glutenFreeArray[i].img +'" id="pic' + id + '" class="pic"> <div class="menucardcontainer">' +
+						'<img src="'+ glutenFreeArray[i].detailimg +'" id="detailpic'+ id + '" class="detailpic">' + 
+						'<h4 class="drink" id="drink'+ id +'"><b>' + glutenFreeArray[i].name + '</b></h4> <p class="pricetag" id="pricetag' + id + '">'
+						 + glutenFreeArray[i].price + ' kr</p> <button class="plussign" id="addplus'+ id +'" aria-hidden="true">add</button>' +
+						'<p class="desc" id="desc' + id + '">'+ glutenFreeArray[i].description +'</p> <p class="desc" id="country' + 
+						id + '">'+ glutenFreeArray[i].country +'</p> </div></div>');		
+				id++;
+	}	
+	
+	for(var i = 0; i < glutenFreeArray.length; i++) {
+		$('#pic' + i).draggable({
+			revert : "invalid",
+			helper : "clone",
+			stack  : ".draggable"
+		});
+		makeDraggable();
+	}
+}
+
 /* Shows gluten free wine */
 function glutenFreeWine(){
 	$('#item-collection').empty();
@@ -739,6 +877,44 @@ function glutenFreeWine(){
 	for(var i = 0; i < wine.length; i++){
 		if(wine[i].gluten == false){
 			glutenFreeArray.push(wine[i]);
+		}
+	}
+	
+	nameSort(glutenFreeArray);
+	
+	//These elements provide information for wine items only
+	document.getElementById('drink-loc').style.display = "inline";
+	document.getElementById('drink-year').style.display = "inline";
+	
+	var wineId = 0;
+	for(var i = 0; i < glutenFreeArray.length; i++) {
+		$('#item-collection').append('<div class="menucard" id="card-item'+ wineId +'"> <img src="' + glutenFreeArray[i].img +
+			'" id="pic' + wineId + '" class="pic"> <div class="menucardcontainer"> <img src="'+ glutenFreeArray[i].detailimg +
+			'" id="detailpic'+ wineId + '" class="detailpic"><h4 class="drink" id="drink' + wineId + '"><b>' + glutenFreeArray[i].name + 
+			'</b></h4> <p class="pricetag" id="pricetag' + wineId + '">' + glutenFreeArray[i].price + ' kr</p><button class="plussign"' + 
+			'id="addplus'+ wineId +'" aria-hidden="true">add</button> <p class="desc" id="desc' + wineId + '">'+ glutenFreeArray[i].description +'</p> '+
+			' <p class="desc" id="country' + wineId + '">'+ glutenFreeArray[i].country +'</p> <p class="desc" id="loc' + wineId + '">'+ glutenFreeArray[i].location +'</p>' +
+			' <p class="desc" id="year' + wineId + '">'+ glutenFreeArray[i].year +'</p> </div></div>');
+		wineId++;
+	}	
+	
+	for(var i = 0; i < glutenFreeArray.length; i++) {
+		$('#pic' + i).draggable({
+			revert : "invalid",
+			helper : "clone",
+			stack  : ".draggable"
+		});
+		makeDraggable();
+	}
+}
+
+/* Shows gluten free wine in Swedish*/
+function glutenFreeSvWine(){
+	$('#item-collection').empty();
+	var glutenFreeArray = [];
+	for(var i = 0; i < svWine.length; i++){
+		if(svWine[i].gluten == false){
+			glutenFreeArray.push(svWine[i]);
 		}
 	}
 	
