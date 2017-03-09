@@ -4,11 +4,16 @@
 
 <nav id="navbarInner" class="navbar">
 	<div class="brand"><a href="/index.html">The Flying Dutchman</a></div>
-	<div id="navtab-0" class="active navtab"><a href="index.html">About <span class="sr-only">(current)</span></a></div>
-	<div id="navtab-1" class="navtab"><a href="menu.html">Menu</a></div>
+	<div id="navtab-0" class="active navtab"><a href="index.html" id="abt">About <span class="sr-only">(current)</span></a></div>
+	<div id="navtab-1" class="navtab"><a href="menu.html" id="m">Menu</a></div>
 	<div class="right-tab-group">
 		<div class="navtab"><a id="loginbtn">Login</a></div>
-		<div class="navtab"><a id="languageBtn">English</a></div>
+		<div class="navtab">
+			<select id="languageBtn" class="navtab">
+				<option id="lang_en" selected="selected" value="1">English</option>
+				<option id="lang_sv" value="2">Svenska</option>
+			</select>
+		</div>
 		<div class="navtab-mobile"><a id="navMenuBtn"><i class="fa fa-bars" aria-hidden="true"></i></a></div>
 		<div class="navtab-mobile"><a id="navCartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
 	</div>
@@ -49,3 +54,4 @@
 -->
 
 <script src="js/navbar.js"></script>
+<script src="js/lang.js"></script>

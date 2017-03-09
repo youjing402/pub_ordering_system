@@ -183,6 +183,13 @@ button {
     object-fit: cover; }
   #about .bg-wrapper {
     position: relative; }
+  #about #ohdiv {
+    margin-top: 50px;
+    margin-left: 300px; }
+  #about #oh {
+    margin-bottom: 10px; }
+  #about #day {
+    margin-top: 0px; }
   #about .float-intro {
     position: absolute;
     top: 120px;

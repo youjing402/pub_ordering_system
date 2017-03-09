@@ -9,13 +9,11 @@ $(document).ready(function() {
 	$('#modalLogin').load("./modal_login.html");
 	$('#cartPopup').load("./cart_popup.html");
 	$('#detailedMenuModal').load("./detailedmenucard.html");
-	//alert("aaa");
-	
-	
+
+	nameSort(beer);
 	createBeerCollection();			
 	getBeerDetails();			//Gets detailed information for modal
 	imageClick(); 				//Detailed view when user clicks on image
-	popularSort(beer);
 
 	//Create and populate cards for every item in the wine object array when user clicks on wine tab
 	$('#winetab').click(function() {
@@ -27,6 +25,9 @@ $(document).ready(function() {
 		}
 		else if($('#whiskeytab').hasClass("selected")) {
 			$('#whiskeytab').removeClass("selected");
+		}
+		else if($('#foodtab').hasClass("selected")) {
+			$('#foodtab').removeClass("selected");
 		}
 		$('#winetab').addClass("selected");
 		$('#item-collection').empty();
@@ -46,6 +47,9 @@ $(document).ready(function() {
 		}
 		else if($('#whiskeytab').hasClass("selected")) {
 			$('#whiskeytab').removeClass("selected");
+		}
+		else if($('#foodtab').hasClass("selected")) {
+			$('#foodtab').removeClass("selected");
 		}
 		$('#beertab').addClass("selected");
 		$('#item-collection').empty();
@@ -71,6 +75,9 @@ $(document).ready(function() {
 		else if($('#whiskeytab').hasClass("selected")) {
 			$('#whiskeytab').removeClass("selected");
 		}
+		else if($('#foodtab').hasClass("selected")) {
+			$('#foodtab').removeClass("selected");
+		}
 		$('#cidertab').addClass("selected");
 		$('#item-collection').empty();
 	});
@@ -86,7 +93,28 @@ $(document).ready(function() {
 		else if($('#cidertab').hasClass("selected")) {
 			$('#cidertab').removeClass("selected");
 		}
+		else if($('#foodtab').hasClass("selected")) {
+			$('#foodtab').removeClass("selected");
+		}
 		$('#whiskeytab').addClass("selected");
+		$('#item-collection').empty();
+	});
+	
+	//Create and populate cards for every item in the whiskey object array when the user clicks on whiskey tab
+	$('#foodtab').click(function() {
+		if($('#beertab').hasClass("selected")) {
+			$('#beertab').removeClass("selected");
+		}
+		else if($('#winetab').hasClass("selected")) {
+			$('#winetab').removeClass("selected");
+		}
+		else if($('#cidertab').hasClass("selected")) {
+			$('#cidertab').removeClass("selected");
+		}
+		else if($('#whiskeytab').hasClass("selected")) {
+			$('#whiskeytab').removeClass("selected");
+		}
+		$('#foodtab').addClass("selected");
 		$('#item-collection').empty();
 	});
 	
@@ -224,9 +252,8 @@ $(document).ready(function() {
 			getWineDetails();
 			winePlusButton();
 		}
-	});	
+	});
 });
-
 
 
 /* This function create and populates cards for every beer item available for purchase.
@@ -234,9 +261,25 @@ $(document).ready(function() {
 /* users to add items to their order by dragging the item My Order */
 function createBeerCollection() {
 	var id = 0;
-	for(var i = 0; i < beer.length; i++) {
-		writeBeerCards(i, id);	
-		id++;
+	nameSort(beer);
+	var language = sessionStorage.getItem('key');
+	if(language == null) {
+		for(var i = 0; i < beer.length; i++) {
+			writeEnBeerCards(i, id);	
+			id++;
+		}
+	}
+	else if(language == "en") {
+		for(var i = 0; i < beer.length; i++) {
+			writeEnBeerCards(i, id);	
+			id++;
+		}
+	}
+	else if(language == "sv") {
+		for(var i = 0; i < svBeer.length; i++) {
+			writeSvBeerCards(i, id);	
+			id++;
+		}
 	}
 	
 	beerPlusButton();
@@ -260,11 +303,26 @@ function createWineCollection() {
 	//These elements provide information for wine items only
 		document.getElementById('drink-loc').style.display = "inline";
 		document.getElementById('drink-year').style.display = "inline";
-	
-	for(var i = 0; i < wine.length; i++) {
-		writeWineCards(i, wineId);
-		wineId++;
-	}
+		nameSort(beer);
+		var language = sessionStorage.getItem('key');
+		if(language == null) {
+			for(var i = 0; i < wine.length; i++) {
+				writeEnWineCards(i, wineId);	
+				wineId++;
+			}
+		}
+		else if(language == "en") {
+			for(var i = 0; i < wine.length; i++) {
+				writeEnWineCards(i, wineId);	
+				wineId++;
+			}
+		}
+		else if(language == "sv") {
+			for(var i = 0; i < svWine.length; i++) {
+				writeSvWineCards(i, wineId);	
+				wineId++;
+			}
+		}
 	
 	winePlusButton();
 
@@ -278,27 +336,50 @@ function createWineCollection() {
 	}
 }
 
-/* This function creates the cards displaying the available beer and relevant information */
-function writeBeerCards(i, id) {
+/* This function creates the cards displaying the available beer and relevant information in English */
+function writeEnBeerCards(i, id) {
 	$('#item-collection').append('<div class="menucard" id="card-item'+ id +'"> ' +
 		'<img src="' + beer[i].img +'" id="pic' + id + '" class="pic"> <div class="menucardcontainer">' +
 		'<img src="'+ beer[i].detailimg +'" id="detailpic'+ id + '" class="detailpic">' + 
 		'<h4 class="drink" id="drink'+ id +'"><b>' + beer[i].name + '</b></h4> <p class="pricetag" id="pricetag' + id + '">'
-		 + beer[i].price + ' kr</p> <i class="fa fa-plus plussign" id="addplus' + id + '" aria-hidden="true"></i>' +
+		 + beer[i].price + ' kr</p> <button class="plussign" id="addplus' + id + '" aria-hidden="true">add</button>' +
 		'<p class="desc" id="desc' + id + '">'+ beer[i].description +'</p> <p class="desc" id="country' + 
 		id + '">'+ beer[i].country +'</p> </div></div>');	
+		
+}
 
-	}
+/* This function creates the cards displaying the available beer and relevant information in Swedish */	
+function writeSvBeerCards(i, id) {
+	$('#item-collection').append('<div class="menucard" id="card-item'+ id +'"> ' +
+		'<img src="' + svBeer[i].img +'" id="pic' + id + '" class="pic"> <div class="menucardcontainer">' +
+		'<img src="'+ svBeer[i].detailimg +'" id="detailpic'+ id + '" class="detailpic">' + 
+		'<h4 class="drink" id="drink'+ id +'"><b>' + svBeer[i].name + '</b></h4> <p class="pricetag" id="pricetag' + id + '">'
+		 + svBeer[i].price + ' kr</p> <button class="plussign" id="addplus' + id + '" aria-hidden="true">Lägg till</button>' +
+		'<p class="desc" id="desc' + id + '">'+ svBeer[i].description +'</p> <p class="desc" id="country' + 
+		id + '">'+ svBeer[i].country +'</p> </div></div>');	
+
+}
 	
-/* This function creates the cards displaying the available wine and relevant information */	
-function writeWineCards(i, wineId) {
+/* This function creates the cards displaying the available wine and relevant information in English */	
+function writeEnWineCards(i, wineId) {
 	$('#item-collection').append('<div class="menucard" id="card-item' + wineId + '"> <img src="' + wine[i].img +
 		'" id="pic' + wineId + '" class="pic"> <div class="menucardcontainer"> <img src="'+ wine[i].detailimg +
 		'" id="detailpic'+ wineId + '" class="detailpic"><h4 class="drink" id="drink' + wineId + '"><b>' + wine[i].name + 
-		'</b></h4> <p class="pricetag" id="pricetag' + wineId + '">' + wine[i].price + ' kr</p><i class="fa fa-plus plussign"' + 
-		'id="addplus' + wineId + '" aria-hidden="true"></i> <p class="desc" id="desc' + wineId + '">'+ wine[i].description +'</p> '+
+		'</b></h4> <p class="pricetag" id="pricetag' + wineId + '">' + wine[i].price + ' kr</p><button class="plussign"' + 
+		'id="addplus' + wineId + '" aria-hidden="true">add</button> <p class="desc" id="desc' + wineId + '">'+ wine[i].description +'</p> '+
 		' <p class="desc" id="country' + wineId + '">'+ wine[i].country +'</p> <p class="desc" id="loc' + wineId + '">'+ wine[i].location +'</p>' +
 		' <p class="desc" id="year' + wineId + '">'+ wine[i].year +'</p> </div></div>');
+}
+
+/* This function creates the cards displaying the available wine and relevant information in Swedish */	
+function writeSvWineCards(i, wineId) {
+	$('#item-collection').append('<div class="menucard" id="card-item' + wineId + '"> <img src="' + svWine[i].img +
+		'" id="pic' + wineId + '" class="pic"> <div class="menucardcontainer"> <img src="'+ svWine[i].detailimg +
+		'" id="detailpic'+ wineId + '" class="detailpic"><h4 class="drink" id="drink' + wineId + '"><b>' + svWine[i].name + 
+		'</b></h4> <p class="pricetag" id="pricetag' + wineId + '">' + wine[i].price + ' kr</p><button class="plussign"' + 
+		'id="addplus' + wineId + '" aria-hidden="true">Lägg till</button> <p class="desc" id="desc' + wineId + '">'+ svWine[i].description +'</p> '+
+		' <p class="desc" id="country' + wineId + '">'+ svWine[i].country +'</p> <p class="desc" id="loc' + wineId + '">'+ svWine[i].location +'</p>' +
+		' <p class="desc" id="year' + wineId + '">'+ svWine[i].year +'</p> </div></div>');
 }
 
 /* This function displays the detailed card view with more information when the user 
@@ -686,3 +767,15 @@ function glutenFreeWine(){
 		makeDraggable();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -32,7 +32,8 @@
   display: flex;
   align-items: center;
   padding-left: 10px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  cursor: pointer; }
   @media screen and (max-width: 800px) {
     #navBar .navtab {
       display: none; } }
@@ -75,3 +76,24 @@
 
 #navBar a {
   text-decoration: none; }
+
+#navBar #languageBtn {
+  width: auto;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  text-decoration: none; }
+
+#navBar select {
+  /*for firefox*/
+  -moz-appearance: none;
+  /*for chrome*/
+  -webkit-appearance: none; }
+
+#navBar #languageBtn select {
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #000;
+  height: 34px;
+  width: 268px;
+  outline: none; }

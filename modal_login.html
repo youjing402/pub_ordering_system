@@ -10,22 +10,23 @@
   </div>
 
   <div class="container">
-    <label><b>Username</b></label>
+    <label><b id="un">Username</b></label>
     <input type="text" id="username" placeholder="Enter Username" name="username" required>
 
-    <label><b>Password</b></label>
+    <label><b id="pw">Password</b></label>
     <input type="password" id="password" placeholder="Enter Password" name="password" required>
 
     <input type="hidden" id="action" value="iou_get" name="action" hidden>
 
-    <button type="submit">Login</button>
+    <button type="submit" id="ml">Login</button>
   </div>
 
   <div class="container" id="cancelsection">
     <button type="button" class="cancelbtn" id="cancelbtn">Cancel</button>
-    <span class="forgotpassword">Forgot <a href="#">password?</a></span>
+    <span class="forgotpassword" id="F">Forgot <a href="#" id="fp">password?</a></span>
   </div>
 </form>
 
 <script src="js/loginscript.js"></script>
+
 </html>

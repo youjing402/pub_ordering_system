@@ -32,7 +32,7 @@
 		align-items: center;
 		padding-left: 10px;
 		padding-right: 10px;
-
+		cursor: pointer;
 		@media screen and (max-width: $mobile-break-point) {
 			display: none;
 		}
@@ -57,6 +57,7 @@
 
 	#mobileMenu {
 		//display: none;
+
 	}
 
 	.navtab.active {
@@ -94,4 +95,29 @@
 	a {
 		text-decoration: none;
 	}
+	
+	#languageBtn {
+	   width: auto;
+	   color: #fff;
+	   background-color: #000; 
+	   border: none;
+	   text-decoration: none;
+	}
+
+	select {
+		/*for firefox*/
+		-moz-appearance: none;
+		/*for chrome*/
+		-webkit-appearance:none;
+	}
+
+	#languageBtn select {
+	   border: 1px solid #ccc;
+	   font-size: 16px;
+	   color: #000; 
+	   height: 34px;
+	   width: 268px;
+	   outline: none;
+	}
+	
 }

@@ -28,7 +28,7 @@
 	<!-- Search bar -->
 	<div class="search-bar">
 		<div class="wrapper">
-			<input type="text" class="form-control search-control" placeholder="Search">
+			<input type="text" class="form-control search-control" placeholder="Search" id="search">
 			<i class="fa fa-search float-right" aria-hidden="true"></i>
 		</div>
 	</div>
@@ -55,7 +55,7 @@
 		<div class="dropdown select" id="sort">
 			<button class="dropbtn" id="sortDropBtn">Sort by <i class="fa fa-angle-down" aria-hidden="true"></i></button>
 			<div class="dropdown-content hidden" id="sortDropContent">
-				<a href="#" id="sortName">Name</a>
+				<a href="#" id="sortName">Alphabetical</a>
 				<a href="#" id="sortPopularity">Popularity</a>
 				<a href="#" id="sortPHTL">Price: Highest to Lowest</a>
 				<a href="#" id="sortPLTH">Price: Lowest to Highest</a>
@@ -75,7 +75,7 @@
 						<div class="category-tab selected" id="beertab">
 							<div class="category-tab-bg">
 								<div class="rectangle">
-									<text class="tab">Beer</text>
+									<text class="tab" id="beer">Beer</text>
 								</div>
 								<div class="arrow-right">
 								</div>
@@ -84,7 +84,7 @@
 						<div class="category-tab" id="winetab">
 							<div class="category-tab-bg">
 								<div class="rectangle">
-									<text class="tab">Wine</text>
+									<text class="tab" id="wine">Wine</text>
 								</div>
 								<div class="arrow-right">
 								</div>
@@ -93,7 +93,7 @@
 						<div class="category-tab" id="cidertab">
 							<div class="category-tab-bg">
 								<div class="rectangle">
-									<text class="tab">Cider</text>
+									<text class="tab" id="cider">Cider</text>
 								</div>
 								<div class="arrow-right">
 								</div>
@@ -102,7 +102,16 @@
 						<div class="category-tab" id="whiskeytab">
 							<div class="category-tab-bg">
 								<div class="rectangle">
-									<text class="tab">Whiskey</text>
+									<text class="tab" id="whiskey">Whiskey</text>
+								</div>
+								<div class="arrow-right">
+								</div>
+							</div>
+						</div>
+						<div class="category-tab" id="foodtab">
+							<div class="category-tab-bg">
+								<div class="rectangle">
+									<text class="tab" id="food">Menu</text>
 								</div>
 								<div class="arrow-right">
 								</div>
@@ -154,6 +163,7 @@
     	<script src="js/order.js"></script>
     	<script src="js/beverage.js"></script>
     	<script src="js/menu.js"></script>
+    	<script src="js/lang.js"></script>
 
 
     </body>
