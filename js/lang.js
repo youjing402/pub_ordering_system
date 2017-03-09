@@ -101,8 +101,20 @@ if (performance.navigation.type == 0) {
 	}
 	if(language == "en" ) {
 		if(location.href.split('/').pop() == "menu.html") {
-			nameSort(beer);
 			enMenu();
+			$('#item-collection').empty();
+			if($('#beertab').hasClass("selected")) {
+				nameSort(beer);
+				createBeerCollection();	//Show all the beer items in beer array
+				imageClick();			//Detailed view when user clicks on image
+				getBeerDetails();	//Gets detailed information for modal
+			}
+			if($('#winetab').hasClass("selected")) {
+				nameSort(wine);
+				createWineCollection();		
+				imageClick();				//Detailed view when user clicks on image
+				getWineDetails(); 			//Gets detailed information for modal
+			}
 		}
 		else if(location.href.split('/').pop() == "index.html") {
 			enAbout();
@@ -110,8 +122,21 @@ if (performance.navigation.type == 0) {
 	}
 	if(language == "sv") {
 		if(location.href.split('/').pop() == "menu.html") {
-			svMenu();
 			$("#languageBtn").val("2").change();
+			svMenu();
+			$('#item-collection').empty();
+			if($('#beertab').hasClass("selected")) {
+				nameSort(svBeer);
+				createBeerCollection();	//Show all the beer items in beer array
+				imageClick();			//Detailed view when user clicks on image
+				getBeerDetails();	//Gets detailed information for modal
+			}
+			if($('#winetab').hasClass("selected")) {
+				nameSort(svWine);
+				createWineCollection();		
+				imageClick();				//Detailed view when user clicks on image
+				getWineDetails(); 			//Gets detailed information for modal
+			}
 		}
 		else if(location.href.split('/').pop() == "index.html") {
 			svAbout();

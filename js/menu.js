@@ -253,6 +253,8 @@ $(document).ready(function() {
 			winePlusButton();
 		}
 	});
+	
+	
 });
 
 
@@ -261,7 +263,6 @@ $(document).ready(function() {
 /* users to add items to their order by dragging the item My Order */
 function createBeerCollection() {
 	var id = 0;
-	nameSort(beer);
 	var language = sessionStorage.getItem('key');
 	if(language == null) {
 		for(var i = 0; i < beer.length; i++) {
@@ -587,6 +588,8 @@ function writeOrderItem(imgsrc, drinkname, price) {
 	$(item).insertAfter("#cartTitle");		
 		counter++;
 }
+
+
 
 
 /* This function allows the plus button on each item card to add that item to My Order 
