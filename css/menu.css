@@ -460,8 +460,7 @@ button {
   #menu .cart-popup {
     position: fixed;
     right: 0px;
-    width: 15%;
-    z-index: -1; }
+    width: 15%; }
     @media screen and (max-width: 800px) {
       #menu .cart-popup {
         top: -10px; } }

@@ -406,7 +406,6 @@ Contains media queries to change the layout based on size of screen
 		position: fixed;
 		right: 0px;
 		width: 15%;
-		z-index: -1;
 
 		@media screen and (max-width: $mobile-break-point) {
 			//display: none;
