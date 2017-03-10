@@ -72,7 +72,14 @@ Defines variables used throughout css
   z-index: 100;
   background-color: grey;
   width: 100%;
-  color: grey; }
+  color: grey;
+  top: 50px; }
+
+#navBar .mobilemenu-tab {
+  width: 100%;
+  padding: 10px; }
+  #navBar .mobilemenu-tab a {
+    width: 100%; }
 
 #navBar .navtab.active {
   background-color: #aaa; }
@@ -100,11 +107,14 @@ Defines variables used throughout css
   text-decoration: none; }
 
 #navBar #languageBtn {
-  width: auto;
+  width: 100%;
   color: #fff;
   background-color: #000;
   border: none;
   text-decoration: none; }
+  @media screen and (max-width: 800px) {
+    #navBar #languageBtn {
+      background-color: grey; } }
 
 #navBar select {
   /*for firefox*/

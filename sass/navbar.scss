@@ -66,6 +66,16 @@ Contains media queries to change the layout based on size of screen
 		background-color: grey;
 		width: 100%;
 		color: grey;
+		top: 50px;
+	}
+
+	.mobilemenu-tab {
+		width: 100%;
+		padding: 10px;
+
+		a {
+			width: 100%;
+		}
 	}
 
 	#mobileMenu {
@@ -110,11 +120,15 @@ Contains media queries to change the layout based on size of screen
 	}
 	
 	#languageBtn {
-	   width: auto;
+	   width: 100%;
 	   color: #fff;
 	   background-color: #000; 
 	   border: none;
 	   text-decoration: none;
+
+	   @media screen and (max-width: $mobile-break-point) {
+			background-color: grey;
+		}
 	}
 
 	select {
