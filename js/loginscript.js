@@ -1,3 +1,14 @@
+/**
+ * File: loginScript.js
+ *
+ * This file provides functionality for the login form. It opens the modal form when the 
+ * user clicks the login button, provides validation for logging in and allows the user to 
+ * close the form.
+ *
+ * Version 1
+ * Authors: Sarah Murphy
+ */
+ 
 // Get the element
 var modal = document.getElementById('modalLogin');
 var loginbtn = document.getElementById('loginbtn');

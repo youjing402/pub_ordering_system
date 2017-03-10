@@ -1,3 +1,13 @@
+/**
+ * File: navbar.js
+ *
+ * This file changes the highlighted tab on the navigation bar depending on the page the  
+ * user is on. It also changes the navigation bar view when the device is a mobile.
+ *
+ * Version 1
+ * Authors: You Jing
+ */
+
 var navbar = $('#navBar');
 var body = $('body');
 var currentTab = 0;

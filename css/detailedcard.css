@@ -1,3 +1,14 @@
+/*
+
+File: detailedCard.css
+
+Version 0.5
+Author: Sarah Murphy
+
+Sets the design and layout for the detailed card modal which opens when a user clicks on 
+the picture on an item. 
+*/
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */

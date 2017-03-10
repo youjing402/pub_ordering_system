@@ -1,3 +1,13 @@
+/**
+ * File: creative.js
+ *
+ * This file loads the necessary HTML documents into the correct divs in the menu page so
+ * they all appear on one page.
+ *
+ * Version 1
+ * Authors: You Jing
+ */
+
 $(document).ready(function() {
 
 	// load the navigation bar

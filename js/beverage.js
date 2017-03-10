@@ -1,3 +1,12 @@
+/**
+ * File: beverage.js
+ *
+ * This file provides the details for all available items to order in both English and Swedish
+ *
+ * Version 1
+ * Authors: Christopher Onomeonga, Sarah Murphy
+ */
+ 
         var beer = [{
 				"name": "A Passion For Gingers",
 				"country" : "Sweden",

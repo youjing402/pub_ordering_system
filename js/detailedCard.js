@@ -1,3 +1,12 @@
+/**
+ * File: detailedCard.js
+ *
+ * This file allows the detailed item display to open and close
+ *
+ * Version 1
+ * Authors: Sarah Murphy
+ */
+
 // Get the elements
 var menuModal = document.getElementById('detailedMenuModal');
 var span = document.getElementsByClassName("closeModal")[0];

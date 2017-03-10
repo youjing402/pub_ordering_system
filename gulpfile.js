@@ -1,3 +1,13 @@
+/**
+ * File: gulpFile.js
+ *
+ * This file allows the css to be synced from sass files, allowing for a neater way to 
+ * code css.
+ *
+ * Version 1
+ * Authors: You Jing
+ */
+ 
 var gulp = require('gulp');
 var less = require('gulp-less');
 var sass = require('gulp-sass');

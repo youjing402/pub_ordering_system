@@ -1,3 +1,14 @@
+/**
+ * File: lang.js
+ *
+ * This file contains the languages which the page can be translated into. It has 
+ * functions which will translate the entire site when the user changes the language.
+ *
+ * Version 1
+ * Author: Sarah Murphy
+ */
+
+
 //English Language for website
 var en = {
 		about: "About",

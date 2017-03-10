@@ -3,8 +3,44 @@
  * Copyright 2016 - UIP Team
  * Licensed under MIT (https://github.com/FitMi/FitMi-landing/blob/master/LICENSE)
  */
+/*
+
+File: about.css
+
+Version 0.5
+Author: You Jing
+
+Sets the design and layout for the home/about page
+Contains media queries to change the layout based on size of screen
+*/
+/*
+
+File: variables.css
+
+Version 0.5
+Author: You Jing
+
+Defines variables used throughout css
+*/
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 @import url("https://fonts.googleapis.com/css?family=Lobster|Pacifico|Lato");
+/*
+
+File: common.css
+
+Version 0.5
+Author: You Jing
+
+*/
+/*
+
+File: variables.css
+
+Version 0.5
+Author: You Jing
+
+Defines variables used throughout css
+*/
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 @import url("https://fonts.googleapis.com/css?family=Lobster|Pacifico|Lato");
 h1,

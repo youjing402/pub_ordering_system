@@ -1,5 +1,15 @@
-//TODO Need to fix when deleting item from cart, can't add same item back to cart
-// Need to fix when click on card plus button, then click cart-item minus button, deletes item
+/**
+ * File: menu.js
+ *
+ * This file populates the page with all available items to order and allows users to 
+ * order either by adding from the card view, the detailed view, or by drag and drop.
+ * It allows users to sort the lists based on number of options .
+ *
+ * Version 2
+ * Authors: Sarah Murphy, Responsibilities: Populating menu, detailed info on image click, drag and drop function, adding items to order
+ *			You Jing, Responsibilities: Loading other files into page
+ *			Christopher Onomeonga, Responsibilities: Sorting functions
+ */
 
 var counter = 0;
 var totalOrder = 0;
@@ -955,7 +965,8 @@ function glutenFreeSvWine(){
 	}
 }
 
-
+//TODO Need to fix when deleting item from cart, can't add same item back to cart
+// Need to fix when click on card plus button, then click cart-item minus button, deletes item
 
 
 
