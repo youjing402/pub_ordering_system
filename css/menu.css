@@ -309,7 +309,7 @@ button {
   @media screen and (min-width: 800px) {
     #menu .dropdown-grp #sort {
       position: absolute;
-      right: 420px; } }
+      right: 220px; } }
   #menu .card {
     /* Add shadows to create the "card" effect */
     transition: 0.3s; }
