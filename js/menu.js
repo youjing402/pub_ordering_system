@@ -557,7 +557,7 @@ function updateOrder(imgsrc, drinkname, price) {
 		var num = price.replace(' kr','');
 		var numParse = parseInt(num);
 		totalOrder += numParse;
-		$('#orderTotal').text(totalOrder + ' ');
+		//$('#orderTotal').text(totalOrder + ' ');
 			console.log(totalOrder);
 	}
 	else {
@@ -673,12 +673,12 @@ function operatorButtons() {
 				amount.innerHTML = amountVal;
 				i1price.innerHTML = priceKr;
 				totalOrder -= priceParse;
-				$('#orderTotal').text(totalOrder + ' ');
+				//$('#orderTotal').text(totalOrder + ' ');
 			}
 			else {
 				item.style.display = 'none';
 				totalOrder -= priceParse;
-				$('#orderTotal').text(totalOrder + ' ');
+				//$('#orderTotal').text(totalOrder + ' ');
 				counter--;
 				if (counter <= 0) {
 					$('.cart-placeholder').removeClass("hidden");

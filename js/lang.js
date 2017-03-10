@@ -29,7 +29,7 @@ var en = {
 		sortAlcoholLevel: "Alcohol Level",
 		sortGlutenFree: "Gluten Free",
 		myorder: "My Order",
-		total: "Total",
+		//total: "Total",
 		orderbtn: "Order",
 		tfd: "The Flying Dutchman",
 		intro: "The Flying Dutchman welcomes you into a classic, stylish relaxed atmosphere, serving a gourmet bar menu selection with a grand selection of fine wines and beers.\
@@ -66,7 +66,7 @@ var sv = {
 		sortAlcoholLevel: "Alkoholnivå",
 		sortGlutenFree: "Glutenfri",
 		myorder: "Min Beställning",
-		total: "Total",
+		//total: "Total",
 		orderbtn: "Beställa",
 		tfd: "The Flying Dutchman",
 		intro: "The Flying Dutchman välkomnar dig till en klassisk, elegant avslappnad atmosfär, serverar en gourmetmeny bar med ett stort urval av fina viner och öl. \
@@ -228,7 +228,7 @@ function enMenu() {
 	$('#sortAlcoholLevel').text(en.sortAlcoholLevel);
 	$('#sortGlutenFree').text(en.sortGlutenFree);
 	$('#mo').text(en.myorder);
-	$('#to').text(en.total);
+	//$('#to').text(en.total);
 	$('#orderbtn').text(en.orderbtn);
 	$('#un').text(en.un);
 	$('#username').attr('placeholder', en.username);
@@ -260,7 +260,7 @@ function svMenu() {
 	$('#sortAlcoholLevel').text(sv.sortAlcoholLevel);
 	$('#sortGlutenFree').text(sv.sortGlutenFree);
 	$('#mo').text(sv.myorder);
-	$('#to').text(sv.total);
+	//$('#to').text(sv.total);
 	$('#orderbtn').text(sv.orderbtn);
 	$('#un').text(sv.un);
 	$('#username').attr('placeholder', sv.username);
