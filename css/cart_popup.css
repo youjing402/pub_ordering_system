@@ -28,8 +28,12 @@ Defines variables used throughout css
   padding-top: 20px;
   color: white;
   background-color: transparent;
-  min-width: 15%;
+  min-width: 12em;
   height: 100%; }
+  @media screen and (max-width: 800px) {
+    #cartPopup {
+      margin-top: 40px;
+      min-width: 10em; } }
 
 @media screen and (max-width: 800px) {
   .cart-mobile-hidden {

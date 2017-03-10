@@ -16,8 +16,12 @@ Contains media queries to change the layout based on size of screen
   padding-top: 20px;
   color: white;
   background-color: transparent;
-  min-width: 15%;
+  min-width: 12em;
   height: 100%;
+  @media screen and (max-width: $mobile-break-point) {
+    margin-top: 40px;
+    min-width: 10em;
+}
 }
 
 .cart-mobile-hidden {
@@ -34,8 +38,8 @@ Contains media queries to change the layout based on size of screen
     padding-bottom: 10px;
 
     p {
-       margin: 0; 
-    }
+     margin: 0; 
+ }
 }
 
 .title {
@@ -126,10 +130,10 @@ Contains media queries to change the layout based on size of screen
 }
 
 .content .amount {
-   margin-bottom:0px;
-   position: absolute;
-   right: 0px;
-   bottom: 0px;
+ margin-bottom:0px;
+ position: absolute;
+ right: 0px;
+ bottom: 0px;
 }
 
 .content .amount i {
