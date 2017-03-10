@@ -68,7 +68,8 @@ Defines variables used throughout css
       display: none; } }
 
 #navBar .mobile-menu {
-  position: absolute;
+  position: fixed;
+  top: 50px;
   z-index: 100;
   background-color: grey;
   width: 100%;

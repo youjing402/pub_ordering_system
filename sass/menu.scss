@@ -85,6 +85,10 @@ Contains media queries to change the layout based on size of screen
 		font-weight: bold;
 	}
 
+	.mobile-menu {
+		position: fix;
+	}
+
 
 	.desc {
 		display: none;

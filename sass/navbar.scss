@@ -61,7 +61,8 @@ Contains media queries to change the layout based on size of screen
 
 	.mobile-menu {
 		//display: none;
-		position: absolute;
+		position: fixed;
+		top: 50px;
 		z-index: 100;
 		background-color: grey;
 		width: 100%;

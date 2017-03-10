@@ -267,6 +267,8 @@ button {
     outline-offset: 3px;
     color: #ffd446;
     font-weight: bold; }
+  #menu .mobile-menu {
+    position: fix; }
   #menu .desc {
     display: none; }
   #menu .detailpic {
