@@ -25,7 +25,6 @@ Defines variables used throughout css
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 @import url("https://fonts.googleapis.com/css?family=Lobster|Pacifico|Lato");
 #cartPopup {
-  margin-top: 40px;
   padding-top: 20px;
   color: white;
   background-color: transparent;

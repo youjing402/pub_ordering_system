@@ -260,7 +260,8 @@ button {
     cursor: pointer;
     background-color: transparent;
     float: right;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    border: 1px solid white; }
   #menu .plussign:hover {
     outline: 1px solid #ffd446;
     outline-offset: 3px;
