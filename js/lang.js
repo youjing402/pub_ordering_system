@@ -31,7 +31,8 @@ var en = {
 		ml: "Login",
 		cancelBtn: "Cancel",
 		f: "Forgot",
-		fp: "password?"
+		fp: "password?",
+		cartph: "You haven't ordered anything yet! Try to drag something here."
 }
 
 //Swedish language for website
@@ -65,9 +66,10 @@ var sv = {
 		pw: "Lösenord",
 		password: "Skriv in ditt Lösenord",
 		ml: "Logga In",
-		cancelBtn: "annullera",
+		cancelBtn: "Annullera",
 		F: "Glömt ditt",
-		fp: "lösenord?"
+		fp: "lösenord?",
+		cartph: "Du har inte beställt något ännu! Försök att dra något här."
 }
 
 /* On page reload, clear the session - this will mean the selected language will no longer 
@@ -222,9 +224,10 @@ function enMenu() {
 	$('pw').text(en.pw);
 	$('#password').attr('placeholder', en.password);
 	$('#ml').text(en.ml);
-	$('#cancelBtn').text(en.cancelBtn);
-	$('#f').text(en.F);
+	$('#cancelbtn').text(en.cancelBtn);
+	$('#fo').text(en.F);
 	$('#fp').text(en.fp);
+	$('#cartph').text(en.cartph);
 }
 
 function svMenu() {
@@ -253,9 +256,10 @@ function svMenu() {
 	$('pw').text(sv.pw);
 	$('#password').attr('placeholder', sv.password);
 	$('#ml').text(sv.ml);
-	$('#cancelBtn').text(sv.cancelBtn);
-	$('#f').text(sv.F);
+	$('#cancelbtn').text(sv.cancelBtn);
+	$('#fo').text(sv.f);
 	$('#fp').text(sv.fp);
+	$('#cartph').text(sv.cartph);
 }
 
 function enAbout() {
@@ -270,8 +274,8 @@ function enAbout() {
 	$('pw').text(en.pw);
 	$('#password').attr('placeholder', en.password);
 	$('#ml').text(en.ml);
-	$('#cancelBtn').text(en.cancelBtn);
-	$('#f').text(en.F);
+	$('#cancelbtn').text(en.cancelBtn);
+	$('#fo').text(en.f);
 	$('#fp').text(en.fp);
 }
 
@@ -287,7 +291,7 @@ function svAbout() {
 	$('pw').text(sv.pw);
 	$('#password').attr('placeholder', sv.password);
 	$('#ml').text(sv.ml);
-	$('#cancelBtn').text(sv.cancelBtn);
-	$('#f').html(sv.F);
+	$('#cancelbtn').text(sv.cancelBtn);
+	$('#fo').html(sv.f);
 	$('#fp').text(sv.fp);
 }

@@ -585,6 +585,7 @@ function addToOrder(imgsrc, drinkname, price) {
 		}
 	}
 	if(!itemExists) {
+		//push item to array
 		var t = price.replace(' kr','');
 		//totalOrder = t;
 		writeOrderItem(imgsrc, drinkname, price);
